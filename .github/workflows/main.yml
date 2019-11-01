@@ -12,6 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: |
+        docker login docker.pkg.github.com -u abdvl -p ${{ secrets.GITHUB_TOKEN }}
         docker build -t oas-changelog .
         docker tag oas-changelog docker.pkg.github.com/abdvl/oas-changelog/oas-changelog:$(date +%s)
         docker push docker.pkg.github.com/abdvl/oas-changelog/oas-changelog:$(date +%s)
