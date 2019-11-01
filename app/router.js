@@ -3,7 +3,7 @@ const genLogs = require("./genLogs");
 
 const router = express.Router();
 
-router.post("/swagger/diff", async function(req, res) {
+router.post("/diff", async function(req, res) {
     const { oldSpec, newSpec, location } = req.body;
 
     const data = await genLogs(oldSpec, newSpec, location);

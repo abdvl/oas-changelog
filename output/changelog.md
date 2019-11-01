@@ -8,186 +8,20 @@ Version to
 Renamed
 -------
 
-### Admins
+#### PATH
 
-**Create a new dashboard administrator**
+`` `/networks/{networkID}/switchStacks/{switchStackId}/remove` ``
 
-#### POST
-
-`/organizations/{organizationId}/admins`
-
-> Param `createOrganizationAdmins` renamed to `createOrganizationAdmin`
+> Path `` `/networks/{networkID}/switchStacks/{switchStackId}/remove` `` renamed to `/networks/{networkId}/switchStacks/{switchStackId}/remove`
 
 * * *
+
+Updates
+-------
 
 #### PATH
 
-`` `/devices/{serial}/camera/analytics/zones/{zoneId}/history` ``
-
-> Path `` `/devices/{serial}/camera/analytics/zones/{zoneId}/history` `` renamed to `/devices/{serial}/camera/analytics/zones/{zone_id}/history`
-
-* * *
-
-### Networks
-
-**Create a network**
-
-#### POST
-
-`/organizations/{organizationId}/networks`
-
-> Param `createOrganizationNetworks` renamed to `createOrganizationNetwork`
-
-* * *
-
-### Group policies
-
-**Create a group policy**
-
-#### POST
-
-`/networks/{networkId}/groupPolicies`
-
-> Param `createNetworkGroupPolicies` renamed to `createNetworkGroupPolicy`
-
-* * *
-
-### HTTP servers
-
-**Add an HTTP server**
-
-#### POST
-
-`/networks/{networkId}/httpServers`
-
-> Param `createNetworkHttpServers` renamed to `createNetworkHttpServer`
-
-* * *
-
-**Send a test webhook**
-
-#### POST
-
-`/networks/{networkId}/httpServers/webhookTests`
-
-> Param `createNetworkHttpServersWebhookTests` renamed to `createNetworkHttpServersWebhookTest`
-
-* * *
-
-### Organizations
-
-**Create a new organization**
-
-#### POST
-
-`/organizations`
-
-> Param `createOrganizations` renamed to `createOrganization`
-
-* * *
-
-### PII
-
-**Submit a new delete or restrict processing PII request**
-
-#### POST
-
-`/networks/{networkId}/pii/requests`
-
-> Param `createNetworkPiiRequests` renamed to `createNetworkPiiRequest`
-
-* * *
-
-### SAML roles
-
-**Create a SAML role**
-
-#### POST
-
-`/organizations/{organizationId}/samlRoles`
-
-> Param `createOrganizationSamlRoles` renamed to `createOrganizationSamlRole`
-
-* * *
-
-### Named tag scope
-
-**Add a target group**
-
-#### POST
-
-`/networks/{networkId}/sm/targetGroups`
-
-> Param `createNetworkSmTargetGroups` renamed to `createNetworkSmTargetGroup`
-
-* * *
-
-### SM
-
-**Update an existing Polaris app**
-
-#### PUT
-
-`/networks/{network_id}/sm/app/polaris/{appId}`
-
-> Param `updateNetworkSmAppPolari` renamed to `updateNetworkSmAppPolaris`
-
-* * *
-
-### Switch stacks
-
-**Create a stack**
-
-#### POST
-
-`/networks/{networkId}/switchStacks`
-
-> Param `createNetworkSwitchStacks` renamed to `createNetworkSwitchStack`
-
-* * *
-
-### Static routes
-
-**Add a static route**
-
-#### POST
-
-`/networks/{networkId}/staticRoutes`
-
-> Param `createNetworkStaticRoutes` renamed to `createNetworkStaticRoute`
-
-* * *
-
-### VLANs
-
-**Add a VLAN**
-
-#### POST
-
-`/networks/{networkId}/vlans`
-
-> Param `createNetworkVlans` renamed to `createNetworkVlan`
-
-* * *
-
-Major
------
-
-### Admins
-
-**Create a new dashboard administrator**
-
-#### POST
-
-`/organizations/{organizationId}/admins`
-
-> OperationId turned from `createOrganizationAdmins` to `createOrganizationAdmin`
-
-* * *
-
-#### PATH
-
-`/devices/{serial}/camera/analytics/zones/{zoneId}/history`
+`/networks/{networkID}/switchStacks/{switchStackId}/remove`
 
 > Deleted
 
@@ -195,237 +29,47 @@ Major
 
 ### Networks
 
-**Create a network**
-
-#### POST
-
-`/organizations/{organizationId}/networks`
-
-> OperationId turned from `createOrganizationNetworks` to `createOrganizationNetwork`
-
-* * *
-
-### Cameras
-
-**Generate a snapshot of what the camera sees at the specified time and return a link to that image.**
-
-#### POST
-
-`/networks/{networkId}/cameras/{serial}/snapshot`
-
-> OperationId turned from `snapshotNetworkCamera` to `generateNetworkCameraSnapshot`
-
-* * *
-
-### Devices
-
-**Blink the LEDs on a device**
-
-#### POST
-
-`/networks/{networkId}/devices/{serial}/blinkLeds`
-
-> OperationId turned from `blinkLedsNetworkDevice` to `blinkNetworkDeviceLeds`
-
-* * *
-
-### Group policies
-
-**Create a group policy**
-
-#### POST
-
-`/networks/{networkId}/groupPolicies`
-
-> OperationId turned from `createNetworkGroupPolicies` to `createNetworkGroupPolicy`
-
-* * *
-
-### HTTP servers
-
-**Add an HTTP server**
-
-#### POST
-
-`/networks/{networkId}/httpServers`
-
-> OperationId turned from `createNetworkHttpServers` to `createNetworkHttpServer`
-
-* * *
-
-**Send a test webhook**
-
-#### POST
-
-`/networks/{networkId}/httpServers/webhookTests`
-
-> OperationId turned from `createNetworkHttpServersWebhookTests` to `createNetworkHttpServersWebhookTest`
-
-* * *
-
-### Organizations
-
-**Create a new organization**
-
-#### POST
-
-`/organizations`
-
-> OperationId turned from `createOrganizations` to `createOrganization`
-
-* * *
-
-### PII
-
-**Submit a new delete or restrict processing PII request**
-
-#### POST
-
-`/networks/{networkId}/pii/requests`
-
-> OperationId turned from `createNetworkPiiRequests` to `createNetworkPiiRequest`
-
-* * *
-
-### SAML roles
-
-**Create a SAML role**
-
-#### POST
-
-`/organizations/{organizationId}/samlRoles`
-
-> OperationId turned from `createOrganizationSamlRoles` to `createOrganizationSamlRole`
-
-* * *
-
-### Named tag scope
-
-**Add a target group**
-
-#### POST
-
-`/networks/{networkId}/sm/targetGroups`
-
-> OperationId turned from `createNetworkSmTargetGroups` to `createNetworkSmTargetGroup`
-
-* * *
-
-### SM
-
-**Update an existing Polaris app**
+**Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.**
 
 #### PUT
 
-`/networks/{network_id}/sm/app/polaris/{appId}`
+`/networks/{networkId}/siteToSiteVpn`
 
-> OperationId turned from `updateNetworkSmAppPolari` to `updateNetworkSmAppPolaris`
+> Property `mode` became required
+
+> Param `updateNetworkSiteToSiteVpn` became required
 
 * * *
 
-**Lock a set of devices**
+### SSIDs
+
+**Update the attributes of an SSID**
 
 #### PUT
 
-`/networks/{network_id}/sm/devices/lock`
-
-> OperationId turned from `updateNetworkSmDevicesLock` to `lockNetworkSmDevices`
-
-* * *
-
-**Wipe a device**
-
-#### PUT
-
-`/networks/{network_id}/sm/device/wipe`
-
-> OperationId turned from `updateNetworkSmDeviceWipe` to `wipeNetworkSmDevice`
-
-* * *
-
-**Force check-in a set of devices**
-
-#### PUT
-
-`/networks/{network_id}/sm/devices/checkin`
-
-> OperationId turned from `updateNetworkSmDevicesCheckin` to `checkinNetworkSmDevices`
-
-* * *
-
-**Move a set of devices to a new network**
-
-#### PUT
-
-`/networks/{network_id}/sm/devices/move`
-
-> OperationId turned from `updateNetworkSmDevicesMove` to `moveNetworkSmDevices`
-
-* * *
-
-**Delete a Cisco Polaris app**
-
-#### DELETE
-
-`/networks/{network_id}/sm/app/polaris/{appId}`
-
-> OperationId turned from `deleteNetworkSmAppPolari` to `deleteNetworkSmAppPolaris`
-
-* * *
-
-### Switch stacks
-
-**Create a stack**
-
-#### POST
-
-`/networks/{networkId}/switchStacks`
-
-> OperationId turned from `createNetworkSwitchStacks` to `createNetworkSwitchStack`
-
-* * *
-
-### Syslog servers
-
-**Update the syslog servers for a network**
-
-#### PUT
-
-`/networks/{networkId}/syslogServers`
+`/networks/{networkId}/ssids/{number}`
 
 > Property `host` became required
 
-> Property `port` became required
+> Property `secret` became required
 
-> Property `roles` became required
+> Property `host` became required
 
-> Property `servers` became required
-
-> Param `updateNetworkSyslogServers` became required
+> Property `secret` became required
 
 * * *
 
-### Static routes
+### Radio settings
 
-**Add a static route**
+**Updates specified RF profile for this network**
 
-#### POST
+#### PUT
 
-`/networks/{networkId}/staticRoutes`
+`/networks/{networkId}/wireless/rfProfiles/{rfProfileId}`
 
-> OperationId turned from `createNetworkStaticRoutes` to `createNetworkStaticRoute`
+> Property `minBitrate` type turn from `string` to `number`
 
-* * *
-
-### VLANs
-
-**Add a VLAN**
-
-#### POST
-
-`/networks/{networkId}/vlans`
-
-> OperationId turned from `createNetworkVlans` to `createNetworkVlan`
+> Property `minBitrate` type turn from `string` to `integer`
 
 * * *
 
@@ -434,196 +78,51 @@ Changes
 
 ### Networks
 
-#### PATH
+**Return a network**
 
-`/organizations/{organizationId}/networks/combine`
+#### GET
 
-> Path added  
-> 
-> POST
-> 
-> _combineOrganizationNetworks_  
-> **Combine multiple networks into a single network**
-> 
->     {
->         "resultingNetwork": {
->             "id": "L_123456",
->             "organizationId": 2930418,
->             "name": "Long Island Office",
->             "timeZone": "America/Los_Angeles",
->             "tags": " tag1 tag2 ",
->             "type": "combined",
->             "disableMyMerakiCom": false
->         }
->     }
+`/networks/{networkId}`
 
-* * *
-
-#### PATH
-
-`/networks/{networkId}/split`
-
-> Path added  
+> Response property `productTypes` value added:
 > 
-> POST
-> 
-> _splitNetwork_  
-> **Split a combined network into individual networks for each type of device**
-> 
->     {
->         "resultingNetworks": [
+>            
 >             {
->                 "id": "N_1234",
->                 "organizationId": 2930418,
->                 "name": "Long Island Office - switch",
->                 "timeZone": "America/Los_Angeles",
->                 "tags": " tag1 tag2 ",
->                 "type": "switch",
->                 "disableMyMerakiCom": false
->             },
->             {
->                 "id": "N_5678",
->                 "organizationId": 2930418,
->                 "name": "Long Island Office - wireless",
->                 "timeZone": "America/Los_Angeles",
->                 "tags": " tag1 tag2 ",
->                 "type": "wireless",
->                 "disableMyMerakiCom": false
+>               productTypes: ["appliance","switch","wireless"]
 >             }
->         ]
->     }
+>     
 
 * * *
 
-### Cameras
+**The traffic analysis data for this network. <a href="https://documentation.meraki.com/MR/Monitoring\_and\_Reporting/Hostname\_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.**
 
-**Generate a snapshot of what the camera sees at the specified time and return a link to that image.**
+#### GET
 
-#### POST
+`/networks/{networkId}/traffic`
 
-`/networks/{networkId}/cameras/{serial}/snapshot`
+> Optional param `t0` added
 
-> Param `snapshotNetworkCamera` Deleted
-
-> Optional param `generateNetworkCameraSnapshot` added
+> Summary changed from `The traffic analysis data for this network. [Traffic Analysis with Hostname Visibility](https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility) must be enabled on the network.` to `The traffic analysis data for this network. [Traffic Analysis with Hostname Visibility](https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility) must be enabled on the network.`
 
 * * *
 
-### Devices
+**List the networks in an organization**
 
-**Blink the LEDs on a device**
+#### GET
 
-#### POST
+`/organizations/{organizationId}/networks`
 
-`/networks/{networkId}/devices/{serial}/blinkLeds`
-
-> Param `blinkLedsNetworkDevice` Deleted
-
-> Optional param `blinkNetworkDeviceLeds` added
-
-* * *
-
-### Group policies
-
-**Update a group policy**
-
-#### PUT
-
-`/networks/{networkId}/groupPolicies/{groupPolicyId}`
-
-> Optional property `firewallAndTrafficShaping` Added
-
-* * *
-
-### SM
-
-**Lock a set of devices**
-
-#### PUT
-
-`/networks/{network_id}/sm/devices/lock`
-
-> Param `updateNetworkSmDevicesLock` Deleted
-
-> Optional param `lockNetworkSmDevices` added
-
-* * *
-
-**Wipe a device**
-
-#### PUT
-
-`/networks/{network_id}/sm/device/wipe`
-
-> Param `updateNetworkSmDeviceWipe` Deleted
-
-> Optional param `wipeNetworkSmDevice` added
-
-* * *
-
-**Force check-in a set of devices**
-
-#### PUT
-
-`/networks/{network_id}/sm/devices/checkin`
-
-> Param `updateNetworkSmDevicesCheckin` Deleted
-
-> Optional param `checkinNetworkSmDevices` added
-
-* * *
-
-**Move a set of devices to a new network**
-
-#### PUT
-
-`/networks/{network_id}/sm/devices/move`
-
-> Param `updateNetworkSmDevicesMove` Deleted
-
-> Optional param `moveNetworkSmDevices` added
-
-* * *
-
-### Config templates
-
-**Update a configuration template**
-
-#### PUT
-
-`/organizations/{organizationId}/configTemplates/{id}`
-
-> Method added
+> Response property `productTypes` value added:
+> 
+>            
+>             {
+>               productTypes: ["appliance","switch","wireless"]
+>             }
+>     
 
 * * *
 
 ### SSIDs
-
-#### PATH
-
-`/networks/{networkId}/ssids/{number}/reset`
-
-> Path added  
-> 
-> POST
-> 
-> _resetNetworkSsid_  
-> **Reset configuration and stats for an SSID**
-> 
->     {
->         "number": 0,
->         "name": "My SSID",
->         "enabled": true,
->         "splashPage": "Click-through splash page",
->         "ssidAdminAccessible": false,
->         "authMode": "open",
->         "ipAssignmentMode": "NAT mode",
->         "bandSelection": "5 GHz band only",
->         "perClientBandwidthLimitUp": 0,
->         "perClientBandwidthLimitDown": 0
->     }
-
-* * *
 
 **Update the attributes of an SSID**
 
@@ -631,559 +130,391 @@ Changes
 
 `/networks/{networkId}/ssids/{number}`
 
+> Optional property `enterpriseAdminAccess` Added
+
 > Optional property `radiusAttributeForGroupPolicies` Added
 
 > Optional property `radiusOverride` Added
 
 * * *
 
-### Wireless health
+### Bluetooth clients
 
-**Aggregated connectivity info for this network**
-
-#### GET
-
-`/networks/{networkId}/connectionStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated connectivity info for this network, grouped by node**
+**List the Bluetooth clients seen by APs in this network**
 
 #### GET
 
-`/networks/{networkId}/devices/connectionStats`
+`/networks/{networkId}/bluetoothClients`
 
-> Optional param `timespan` added
+> Optional param `t0` added
 
-* * *
-
-**Aggregated connectivity info for a given AP on this network**
-
-#### GET
-
-`/networks/{networkId}/devices/{serial}/connectionStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated connectivity info for this network, grouped by clients**
-
-#### GET
-
-`/networks/{networkId}/clients/connectionStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated connectivity info for a given client on this network**
-
-#### GET
-
-`/networks/{networkId}/clients/{clientId}/connectionStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated latency info for this network**
-
-#### GET
-
-`/networks/{networkId}/latencyStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated latency info for this network, grouped by node**
-
-#### GET
-
-`/networks/{networkId}/devices/latencyStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated latency info for a given AP on this network**
-
-#### GET
-
-`/networks/{networkId}/devices/{serial}/latencyStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated latency info for this network, grouped by clients**
-
-#### GET
-
-`/networks/{networkId}/clients/latencyStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**Aggregated latency info for a given client on this network**
-
-#### GET
-
-`/networks/{networkId}/clients/{clientId}/latencyStats`
-
-> Optional param `timespan` added
-
-* * *
-
-**List of all failed client connection events on this network in a given time range**
-
-#### GET
-
-`/networks/{networkId}/failedConnections`
-
-> Optional param `timespan` added
-
-* * *
-
-### Action batches
-
-#### PATH
-
-`/organizations/{organizationId}/actionBatches`
-
-> Path added  
+> Response property `id` value added:
 > 
-> GET
-> 
-> _getOrganizationActionBatches_  
-> **Return the list of action batches in the organization**
-> 
->     [
->         {
->             "id": "123",
->             "status": "in progress",
->             "confirmed": true,
->             "synchronous": false,
->             "actions": [
->                 {
->                     "resource": "/devices/QXXX-XXXX-XXXX/switchPorts/3",
->                     "operation": "update",
->                     "body": {
->                         "enabled": false
->                     }
->                 }
->             ]
->         }
->     ]
-> 
->   
-> 
-> POST
-> 
-> _createOrganizationActionBatch_  
-> **Create an action batch**
-> 
->     {
->         "id": "123",
->         "status": "in progress",
->         "confirmed": true,
->         "synchronous": false,
->         "actions": [
+>            
 >             {
->                 "resource": "/devices/QXXX-XXXX-XXXX/switchPorts/3",
->                 "operation": "update",
->                 "body": {
->                     "enabled": false
->                 }
+>               id: "1284392014819"
 >             }
->         ]
->     }
+>     
+
+> Response property `name` value added:
+> 
+>            
+>             {
+>               name: "Miles's phone"
+>             }
+>     
+
+> Response property `deviceName` value added:
+> 
+>            
+>             {
+>               deviceName: "Bose QuietComfort 35"
+>             }
+>     
+
+> Response property `manufacturer` value added:
+> 
+>            
+>             {
+>               manufacturer: "Bose"
+>             }
+>     
+
+> Response property `lastSeen` value added:
+> 
+>            
+>             {
+>               lastSeen: 1526087474
+>             }
+>     
+
+> Response property `seenByDeviceMac` value added:
+> 
+>            
+>             {
+>               seenByDeviceMac: "00:11:22:33:44:55"
+>             }
+>     
+
+> Response property `inSightAlert` value added:
+> 
+>            
+>             {
+>               inSightAlert: false
+>             }
+>     
+
+> Response property `outOfSightAlert` value added:
+> 
+>            
+>             {
+>               outOfSightAlert: false
+>             }
+>     
+
+> Response property `tags` value added:
+> 
+>            
+>             {
+>               tags: ["tag1","tag2"]
+>             }
+>     
 
 * * *
 
-#### PATH
+**Return a Bluetooth client. Bluetooth clients can be identified by their ID or their MAC.**
 
-`/organizations/{organizationId}/actionBatches/{id}`
+#### GET
 
-> Path added  
+`/networks/{networkId}/bluetoothClients/{bluetoothClientId}`
+
+> Response property `id` value added:
 > 
-> GET
-> 
-> _getOrganizationActionBatch_  
-> **Return an action batch**
-> 
->     {
->         "id": "123",
->         "status": "in progress",
->         "confirmed": true,
->         "synchronous": false,
->         "actions": [
+>            
 >             {
->                 "resource": "/devices/QXXX-XXXX-XXXX/switchPorts/3",
->                 "operation": "update",
->                 "body": {
->                     "enabled": false
->                 }
+>               id: "1284392014819"
 >             }
->         ]
->     }
+>     
+
+> Response property `name` value added:
 > 
->   
-> 
-> PUT
-> 
-> _updateOrganizationActionBatch_  
-> **Update an action batch**
-> 
->     {
->         "id": "123",
->         "status": "in progress",
->         "confirmed": true,
->         "synchronous": false,
->         "actions": [
+>            
 >             {
->                 "resource": "/devices/QXXX-XXXX-XXXX/switchPorts/3",
->                 "operation": "update",
->                 "body": {
->                     "enabled": false
->                 }
+>               name: "Miles's phone"
 >             }
->         ]
->     }
+>     
+
+> Response property `deviceName` value added:
 > 
->   
+>            
+>             {
+>               deviceName: "Bose QuietComfort 35"
+>             }
+>     
+
+> Response property `manufacturer` value added:
 > 
-> DELETE
+>            
+>             {
+>               manufacturer: "Bose"
+>             }
+>     
+
+> Response property `lastSeen` value added:
 > 
-> _deleteOrganizationActionBatch_  
-> **Delete an action batch**
+>            
+>             {
+>               lastSeen: 1526087474
+>             }
+>     
+
+> Response property `seenByDeviceMac` value added:
+> 
+>            
+>             {
+>               seenByDeviceMac: "00:11:22:33:44:55"
+>             }
+>     
+
+> Response property `inSightAlert` value added:
+> 
+>            
+>             {
+>               inSightAlert: false
+>             }
+>     
+
+> Response property `outOfSightAlert` value added:
+> 
+>            
+>             {
+>               outOfSightAlert: false
+>             }
+>     
+
+> Response property `tags` value added:
+> 
+>            
+>             {
+>               tags: ["tag1","tag2"]
+>             }
+>     
 
 * * *
 
 ### Clients
 
-#### PATH
+**Return the client associated with the given identifier. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.**
 
-`/networks/{networkId}/clients`
+#### GET
 
-> Path added  
+`/networks/{networkId}/clients/{clientId}`
+
+> Response property `status` value added:
 > 
-> GET
-> 
-> _getNetworkClients_  
-> **List the clients that have used this network in the timespan**
-> 
->     {
->         "usage": {
->             "sent": 138,
->             "recv": 61
->         },
->         "id": "k74272e",
->         "description": "Miles's phone",
->         "mac": "00:11:22:33:44:55",
->         "ip": "1.2.3.4",
->         "user": "milesmeraki",
->         "vlan": 255,
->         "switchport": null,
->         "ip6": "",
->         "firstSeen": 1518365681,
->         "lastSeen": 1526087474,
->         "manufacturer": "Apple",
->         "os": "iOS"
->     }
+>            
+>             {
+>               status: "Online"
+>             }
+>     
 
 * * *
 
-### OpenAPI Spec
+**Return the splash authorization for a client, for each SSID they've associated with through splash. Only enabled SSIDs with Click-through splash enabled will be included. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.**
+
+#### GET
+
+`/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus`
+
+> Summary changed from `Return the splash authorization for a client, for each SSID they've associated with through splash. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.` to `Return the splash authorization for a client, for each SSID they've associated with through splash. Only enabled SSIDs with Click-through splash enabled will be included. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.`
+
+* * *
+
+### Devices
+
+**Update the attributes of a device**
+
+#### PUT
+
+`/networks/{networkId}/devices/{serial}`
+
+> Optional property `floorPlanId` Added
+
+* * *
+
+**List the devices in a network**
+
+#### GET
+
+`/networks/{networkId}/devices`
+
+> Response property `floorPlanId` value added:
+> 
+>            
+>             {
+>               floorPlanId: "g_1234567"
+>             }
+>     
+
+* * *
+
+**Return a single device**
+
+#### GET
+
+`/networks/{networkId}/devices/{serial}`
+
+> Response property `floorPlanId` value added:
+> 
+>            
+>             {
+>               floorPlanId: "g_1234567"
+>             }
+>     
+
+* * *
+
+**List the devices in an organization**
+
+#### GET
+
+`/organizations/{organizationId}/devices`
+
+> Response property `firmware` value added:
+> 
+>            
+>             {
+>               firmware: "wireless-25-14"
+>             }
+>     
+
+* * *
+
+### Management interface settings
+
+**Return the management interface settings for a device**
+
+#### GET
+
+`/networks/{networkId}/devices/{serial}/managementInterfaceSettings`
+
+> Response property `ddnsHostnames` value added:
+> 
+>            
+>             {
+>               ddnsHostnames: {"activeDdnsHostname":"mx1-sample.dynamic-m.com","ddnsHostnameWan1":"mx1-sample-1.dynamic-m.com","ddnsHostnameWan2":"mx1-sample-2.dynamic-m.com"}
+>             }
+>     
+
+* * *
+
+### SM
 
 #### PATH
 
-`/organizations/{organizationId}/openapiSpec`
+`/networks/{networkId}/sm/device/{deviceId}/refreshDetails`
+
+> Path added  
+> 
+> POST
+> 
+> _refreshNetworkSmDeviceDetails_  
+> **Refresh the details of a device**
+
+* * *
+
+**List the devices enrolled in an SM network with various specified fields and filters**
+
+#### GET
+
+`/networks/{networkId}/sm/devices`
+
+> Optional param `batchSize` added
+
+* * *
+
+### MX static routes
+
+**Update a static route for an MX or teleworker network**
+
+#### PUT
+
+`/networks/{networkId}/staticRoutes/{srId}`
+
+> Summary changed from `Update a static route` to `Update a static route for an MX or teleworker network`
+
+* * *
+
+**List the static routes for an MX or teleworker network**
+
+#### GET
+
+`/networks/{networkId}/staticRoutes`
+
+> Summary changed from `List the static routes for this network` to `List the static routes for an MX or teleworker network`
+
+* * *
+
+**Return a static route for an MX or teleworker network**
+
+#### GET
+
+`/networks/{networkId}/staticRoutes/{srId}`
+
+> Summary changed from `Return a static route` to `Return a static route for an MX or teleworker network`
+
+* * *
+
+**Add a static route for an MX or teleworker network**
+
+#### POST
+
+`/networks/{networkId}/staticRoutes`
+
+> Summary changed from `Add a static route` to `Add a static route for an MX or teleworker network`
+
+* * *
+
+**Delete a static route from an MX or teleworker network**
+
+#### DELETE
+
+`/networks/{networkId}/staticRoutes/{srId}`
+
+> Summary changed from `Delete a static route from a network` to `Delete a static route from an MX or teleworker network`
+
+* * *
+
+### Switch settings
+
+#### PATH
+
+`/networks/{networkId}/switch/settings/mtu`
 
 > Path added  
 > 
 > GET
 > 
-> _getOrganizationOpenapiSpec_  
-> **Return the OpenAPI Specification of the organization's API documentation in JSON**
+> _getNetworkSwitchSettingsMtu_  
+> **Return the MTU configuration**
 > 
 >     {
->         "swagger": "2.0",
->         "info": {
->             "version": "0",
->             "title": "Meraki Dashboard API",
->             "description": "The Cisco Meraki Dashboard API is a modern REST API based on the [OpenAPI](https://swagger.io/docs/specification/about/) specification.\n\n## What can the API be used for?\nThe Dashboard API can be used for many purposes. It’s meant to be an open-ended tool. Here are some examples of use cases:\n\n* Add new organizations, admins, networks, devices, VLANs, and more\n* Configure networks at scale\n* Automatically on-board and off-board new employees’ teleworker setups\n* Build your own dashboard for store managers, field techs, or unique use cases\n\n## Enabling the Dashboard API\n1. Begin by logging into [Meraki Dashboard](https://dashboard.meraki.com) and navigating to **Organization > Settings**\n\n2. Locate the section titled **Dashboard API access** and select **Enable Access**, then **Save** your changes\n\n3. After enabling the API, choose your username at the top-right of the Meraki Dashboard and select **my profile**\n\n4. Locate the section titled **Dashboard API access** and select **Generate new API key**\n\n*Note: The API key is associated with a Dashboard administrator account. You can generate, revoke, and regenerate your API key on your profile.*\n\n**Keep your API key safe as it provides authentication to all of your organizations with the API enabled. If your API key is shared, you can regenerate your API key at any time. This will revoke the existing API key.**\n\nCopy and store your API key in a safe place. Dashboard does not store API keys in plaintext for security reasons, so this is the only time you will be able to record it. If you lose or forget your API key, you will have to revoke it and generate a new one.\n\nEvery request must specify an API key via a request header.\n\nThe API key must be specified in the URL header. The API will return a 404 (rather than a 403) in response to a request with a missing or incorrect API key in order to prevent leaking the existence of resources to unauthorized users.\n\n`X-Cisco-Meraki-API-Key: <secret key>`\n\nRead more about API [authorization](../api/#/python/getting-started/authorizing-your-client)\n\n\n## Versioning\nOnce an API version is released, we will make only backwards-compatible changes to it. Backwards-compatible changes include:\n\n* Adding new API resources\n\n* Adding new optional request parameters to existing API methods\n\n* Adding new properties to existing API responses\n\n* Changing the order of properties in existing API responses\n\n## Rate Limit\n* The Dashboard API is limited to **5 calls per second**, per organization.\n* A burst of 5 additional calls are allowed in the first second, so a maximum of 15 calls in the first 2 seconds.\n* The rate limiting technique is based off of the [token bucket model](https://en.wikipedia.org/wiki/Token_bucket).\n* An error with a `429` status code will be returned when the rate limit has been exceeded.\n* Expect to backoff for 1 - 2 seconds if the limit has been exceeded. You may have to wait potentially longer if a large number of requests were made within this timeframe.\n\n\n## Additional Details\nIdentifiers in the API are opaque strings. A `{networkId}`, for example, might be the string “126043”, whereas an `{orderId}` might contain characters, such as “4S1234567”. Client applications must not try to parse them as numbers. Even identifiers that look like numbers might be too long to encode without loss of precision in Javascript, where the only numeric type is IEEE 754 floating point.\n\nVerbs in the API follow the usual REST conventions:\n\n`GET` returns the value of a resource or a list of resources, depending on whether an identifier is specified. For example, a `GET` of `/v0/organizations` returns a list of organizations, whereas a `GET` of `/v0/organizations/{organizationId}` returns a particular organization.\n\n`POST` adds a new resource, as in a `POST` to `/v0/organizations/{organizationId}/admins`, or performs some other non-idempotent change.\n\n`PUT` updates a resource. `PUTs` are idempotent; they update a resource, creating it first if it does not already exist. A `PUT` should specify all the fields of a resource; the API will revert omitted fields to their default value.\n\n`DELETE` removes a resource.\n",
->             "x-codegen-settings": {
->                 "appendContentHeaders": true,
->                 "brandLabel": "meraki",
->                 "collectParameters": true,
->                 "doNotSplitWords": [
->                     "SSIDs",
->                     "VLANs"
+>         "defaultMtuSize": 9578,
+>         "overrides": [
+>             {
+>                 "switches": [
+>                     "Q234-ABCD-0001",
+>                     "Q234-ABCD-0002",
+>                     "Q234-ABCD-0003"
 >                 ],
->                 "generateAsyncCode": true,
->                 "projectName": "meraki",
->                 "sortResources": true,
->                 "useEnumPostfix": true,
->                 "useMethodPrefix": false,
->                 "useModelPostfix": true,
->                 "validateRequiredParameters": true
->             }
->         },
->         "host": "api.meraki.com",
->         "basePath": "/api/v0",
->         "schemes": [
->             "https"
->         ],
->         "consumes": [
->             "application/json"
->         ],
->         "produces": [
->             "application/json"
->         ],
->         "securityDefinitions": {
->             "meraki_api_key": {
->                 "type": "apiKey",
->                 "name": "X-Cisco-Meraki-API-Key",
->                 "in": "header"
->             }
->         },
->         "security": [
->             {
->                 "meraki_api_key": []
->             }
->         ],
->         "paths": {
->             "/pets": {
->                 "get": {
->                     "description": "Returns all pets from the system",
->                     "operationId": "getPets",
->                     "responses": {
->                         "200": {
->                             "description": "Successful operation",
->                             "examples": {
->                                 "application/json": [
->                                     {
->                                         "id": 1,
->                                         "name": "Riley",
->                                         "type": "Cat"
->                                     }
->                                 ]
->                             }
->                         }
->                     }
->                 }
->             }
->         }
->     }
-
-* * *
-
-### Organization alert settings
-
-#### PATH
-
-`/organizations/{organizationId}/alertSettings`
-
-> Path added  
-> 
-> GET
-> 
-> _getOrganizationAlertSettings_  
-> **Return the alert configuration for this organization**
-> 
->     {
->         "defaultDestinations": {
->             "emails": [
->                 "miles@meraki.com"
->             ],
->             "allAdmins": true
->         },
->         "alerts": [
->             {
->                 "type": "insightAppOutage",
->                 "enabled": true,
->                 "alertDestinations": {
->                     "emails": [
->                         "miles@meraki.com"
->                     ],
->                     "allAdmins": false
->                 },
->                 "filters": {
->                     "alertOnAllApps": true
->                 }
->             }
->         ]
->     }
-> 
->   
-> 
-> PUT
-> 
-> _updateOrganizationAlertSettings_  
-> **Update the alert configuration for this organization**
-> 
->     {
->         "defaultDestinations": {
->             "emails": [
->                 "miles@meraki.com"
->             ],
->             "allAdmins": true
->         },
->         "alerts": [
->             {
->                 "type": "insightAppOutage",
->                 "enabled": true,
->                 "alertDestinations": {
->                     "emails": [
->                         "miles@meraki.com"
->                     ],
->                     "allAdmins": false
->                 },
->                 "filters": {
->                     "alertOnAllApps": true
->                 }
->             }
->         ]
->     }
-
-* * *
-
-### Radio settings
-
-#### PATH
-
-`/networks/{networkId}/devices/{serial}/wireless/radioSettings`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkDeviceWirelessRadioSettings_  
-> **Return the radio settings of a device**
-> 
->     {
->         "serial": "Q234-ABCD-5678",
->         "rfProfileId": "1234"
->     }
-> 
->   
-> 
-> PUT
-> 
-> _updateNetworkDeviceWirelessRadioSettings_  
-> **Update the radio settings of a device**
-> 
->     {
->         "serial": "Q234-ABCD-5678",
->         "rfProfileId": "1234"
->     }
-
-* * *
-
-#### PATH
-
-`/networks/{networkId}/wireless/rfProfiles`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkWirelessRfProfiles_  
-> **List the non-basic RF profiles for this network**
-> 
->     [
->         {
->             "id": "1234",
->             "networkId": "N_24329156",
->             "name": "Some Custom RF Profile"
->         }
->     ]
-
-* * *
-
-### Intrusion settings
-
-#### PATH
-
-`/networks/{networkId}/security/intrusionSettings`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkSecurityIntrusionSettings_  
-> **Returns all supported intrusion settings for an MX network**
-> 
->     {
->         "mode": "prevention",
->         "idsRulesets": "balanced",
->         "protectedNetworks": {
->             "useDefault": false,
->             "includedCidr": [
->                 "10.0.0.0/8",
->                 "127.0.0.0/8",
->                 "169.254.0.0/16",
->                 "172.16.0.0/12"
->             ],
->             "excludedCidr": [
->                 "10.0.0.0/8",
->                 "127.0.0.0/8"
->             ]
->         }
->     }
-> 
->   
-> 
-> PUT
-> 
-> _updateNetworkSecurityIntrusionSettings_  
-> **Set the supported instrusion settings for an MX network**
-> 
->     {
->         "mode": "prevention",
->         "idsRulesets": "balanced",
->         "protectedNetworks": {
->             "useDefault": false,
->             "includedCidr": [
->                 "10.0.0.0/8",
->                 "127.0.0.0/8",
->                 "169.254.0.0/16",
->                 "172.16.0.0/12"
->             ],
->             "excludedCidr": [
->                 "10.0.0.0/8",
->                 "127.0.0.0/8"
->             ]
->         }
->     }
-
-* * *
-
-#### PATH
-
-`/organizations/{organizationId}/security/intrusionSettings`
-
-> Path added  
-> 
-> GET
-> 
-> _getOrganizationSecurityIntrusionSettings_  
-> **Returns all supported intrusion settings for an organization.**
-> 
->     {
->         "whitelistedRules": [
->             {
->                 "ruleId": "meraki:intrusion/snort/GID/01/SID/688",
->                 "message": "SQL sa login failed"
+>                 "mtuSize": 1500
 >             },
 >             {
->                 "ruleId": "meraki:intrusion/snort/GID/01/SID/5805",
->                 "message": "MALWARE-OTHER Trackware myway speedbar runtime detection - switch engines"
+>                 "switchProfiles": [
+>                     "1284392014819",
+>                     "2983092129865"
+>                 ],
+>                 "mtuSize": 1600
 >             }
 >         ]
 >     }
@@ -1192,134 +523,53 @@ Changes
 > 
 > PUT
 > 
-> _updateOrganizationSecurityIntrusionSettings_  
-> **Sets supported intrusion settings for an organization.**
+> _updateNetworkSwitchSettingsMtu_  
+> **Update the MTU configuration**
 > 
 >     {
->         "whitelistedRules": [
+>         "defaultMtuSize": 9578,
+>         "overrides": [
 >             {
->                 "ruleId": "meraki:intrusion/snort/GID/01/SID/688",
->                 "message": "SQL sa login failed"
+>                 "switches": [
+>                     "Q234-ABCD-0001",
+>                     "Q234-ABCD-0002",
+>                     "Q234-ABCD-0003"
+>                 ],
+>                 "mtuSize": 1500
 >             },
 >             {
->                 "ruleId": "meraki:intrusion/snort/GID/01/SID/5805",
->                 "message": "MALWARE-OTHER Trackware myway speedbar runtime detection - switch engines"
+>                 "switchProfiles": [
+>                     "1284392014819",
+>                     "2983092129865"
+>                 ],
+>                 "mtuSize": 1600
 >             }
 >         ]
 >     }
 
 * * *
 
-### Security events
-
 #### PATH
 
-`/networks/{networkId}/securityEvents`
+`/networks/{networkId}/switch/settings/qosRules`
 
 > Path added  
 > 
 > GET
 > 
-> _getNetworkSecurityEvents_  
-> **List the security events for a network**
+> _getNetworkSwitchSettingsQosRules_  
+> **List quality of service rules**
 > 
 >     [
 >         {
->             "ts": 1547683314.270398,
->             "deviceMac": "00:18:0a:01:02:03",
->             "clientMac": "A1:B2:C3:D4:E5:F6",
->             "srcIp": "1.2.3.4:34195",
->             "destIp": "10.20.30.40:80",
->             "protocol": "tcp/ip",
->             "priority": "2",
->             "classification": "4",
->             "blocked": true,
->             "message": "SERVER-WEBAPP JBoss JMX console access attempt",
->             "signature": "1:21516:9",
->             "sigSource": ""
->         },
->         {
->             "ts": 1547683827.723265,
->             "deviceMac": "00:18:0a:01:02:03",
->             "clientMac": "A1:B2:C3:D4:E5:F6",
->             "srcIp": "1.2.3.4:56023",
->             "destIp": "10.20.30.40:80",
->             "protocol": "tcp/ip",
->             "priority": "1",
->             "classification": "33",
->             "blocked": true,
->             "message": "POLICY-OTHER Adobe ColdFusion admin interface access attempt",
->             "signature": "1:25975:2",
->             "sigSource": ""
->         }
->     ]
-
-* * *
-
-#### PATH
-
-`/organizations/{organizationId}/securityEvents`
-
-> Path added  
-> 
-> GET
-> 
-> _getOrganizationSecurityEvents_  
-> **List the security events for an organization**
-> 
->     [
->         {
->             "ts": 1547683314.270398,
->             "deviceMac": "00:18:0a:01:02:03",
->             "clientMac": "A1:B2:C3:D4:E5:F6",
->             "srcIp": "1.2.3.4:34195",
->             "destIp": "10.20.30.40:80",
->             "protocol": "tcp/ip",
->             "priority": "2",
->             "classification": "4",
->             "blocked": true,
->             "message": "SERVER-WEBAPP JBoss JMX console access attempt",
->             "signature": "1:21516:9",
->             "sigSource": ""
->         },
->         {
->             "ts": 1547683827.723265,
->             "deviceMac": "00:18:0a:01:02:03",
->             "clientMac": "A1:B2:C3:D4:E5:F6",
->             "srcIp": "1.2.3.4:56023",
->             "destIp": "10.20.30.40:80",
->             "protocol": "tcp/ip",
->             "priority": "1",
->             "classification": "33",
->             "blocked": true,
->             "message": "POLICY-OTHER Adobe ColdFusion admin interface access attempt",
->             "signature": "1:25975:2",
->             "sigSource": ""
->         }
->     ]
-
-* * *
-
-### Geofence regions
-
-#### PATH
-
-`/networks/{networkId}/sm/geofences/{geofenceId}/regions`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkSmGeofenceRegions_  
-> **List the geofence's regions associated with the specified geofence**
-> 
->     [
->         {
->             "description": "This is a sample geofence region",
->             "type": "circle",
->             "lat": 10,
->             "lon": 10,
->             "radius": 10
+>             "id": "1284392014819",
+>             "vlan": 100,
+>             "protocol": "TCP",
+>             "srcPort": 2000,
+>             "srcPortRange": null,
+>             "dstPort": null,
+>             "dstPortRange": "3000-3100",
+>             "dscp": 0
 >         }
 >     ]
 > 
@@ -1327,627 +577,545 @@ Changes
 > 
 > POST
 > 
-> _createNetworkSmGeofenceRegion_  
-> **Add a new geofence region to the specified geofence**
+> _createNetworkSwitchSettingsQosRule_  
+> **Add a quality of service rule**
 > 
 >     {
->         "description": "This is a sample geofence region",
->         "type": "circle",
->         "lat": 10,
->         "lon": 10,
->         "radius": 10
+>         "id": "1284392014819",
+>         "vlan": 100,
+>         "protocol": "TCP",
+>         "srcPort": 2000,
+>         "srcPortRange": null,
+>         "dstPort": null,
+>         "dstPortRange": "3000-3100",
+>         "dscp": 0
 >     }
 
 * * *
 
 #### PATH
 
-`/networks/{networkId}/sm/geofences/{geofenceId}/regions/{regionId}`
+`/networks/{networkId}/switch/settings/qosRules/order`
 
 > Path added  
 > 
 > GET
 > 
-> _getNetworkSmGeofenceRegion_  
-> **Show the specified geofence region**
+> _getNetworkSwitchSettingsQosRulesOrder_  
+> **Return the quality of service rule IDs by order in which they will be processed by the switch**
 > 
 >     {
->         "description": "This is a sample geofence region",
->         "type": "circle",
->         "lat": 10,
->         "lon": 10,
->         "radius": 10
+>         "ruleIds": [
+>             "1284392014819",
+>             "2983092129865"
+>         ]
 >     }
 > 
 >   
 > 
 > PUT
 > 
-> _updateNetworkSmGeofenceRegion_  
-> **Update a specified geofence region**
+> _updateNetworkSwitchSettingsQosRulesOrder_  
+> **Update the order in which the rules should be processed by the switch**
 > 
 >     {
->         "description": "This is a sample geofence region",
->         "type": "circle",
->         "lat": 10,
->         "lon": 10,
->         "radius": 10
+>         "ruleIds": [
+>             "1284392014819",
+>             "2983092129865"
+>         ]
+>     }
+
+* * *
+
+#### PATH
+
+`/networks/{networkId}/switch/settings/qosRules/{qosRuleId}`
+
+> Path added  
+> 
+> GET
+> 
+> _getNetworkSwitchSettingsQosRule_  
+> **Return a quality of service rule**
+> 
+>     {
+>         "id": "1284392014819",
+>         "vlan": 100,
+>         "protocol": "TCP",
+>         "srcPort": 2000,
+>         "srcPortRange": null,
+>         "dstPort": null,
+>         "dstPortRange": "3000-3100",
+>         "dscp": 0
+>     }
+> 
+>   
+> 
+> PUT
+> 
+> _updateNetworkSwitchSettingsQosRule_  
+> **Update a quality of service rule**
+> 
+>     {
+>         "id": "1284392014819",
+>         "vlan": 100,
+>         "protocol": "TCP",
+>         "srcPort": 2000,
+>         "srcPortRange": null,
+>         "dstPort": null,
+>         "dstPortRange": "3000-3100",
+>         "dscp": 0
 >     }
 > 
 >   
 > 
 > DELETE
 > 
-> _deleteNetworkSmGeofenceRegion_  
-> **Delete a geofence region attached to the specified geofence**
+> _deleteNetworkSwitchSettingsQosRule_  
+> **Delete a quality of service rule**
 
 * * *
 
-### Geofences
-
 #### PATH
 
-`/networks/{networkId}/sm/geofences`
+`/networks/{networkId}/switch/settings/stormControl`
 
 > Path added  
 > 
 > GET
 > 
-> _getNetworkSmGeofences_  
-> **List the geofences in this network**
+> _getNetworkSwitchSettingsStormControl_  
+> **Return the global enhanced storm control configuration**
+> 
+>     {
+>         "broadcastThreshold": 30,
+>         "multicastThreshold": 30,
+>         "unknownUnicastThreshold": 30
+>     }
+> 
+>   
+> 
+> PUT
+> 
+> _updateNetworkSwitchSettingsStormControl_  
+> **Update the global enhanced storm control configuration**
+> 
+>     {
+>         "broadcastThreshold": 30,
+>         "multicastThreshold": 30,
+>         "unknownUnicastThreshold": 30
+>     }
+
+* * *
+
+#### PATH
+
+`/networks/{networkId}/switch/settings/stp`
+
+> Path added  
+> 
+> GET
+> 
+> _getNetworkSwitchSettingsStp_  
+> **Returns STP settings**
+> 
+>     {
+>         "rstpEnabled": true,
+>         "stpBridgePriority": [
+>             {
+>                 "switches": [
+>                     "Q234-ABCD-0001",
+>                     "Q234-ABCD-0002",
+>                     "Q234-ABCD-0003"
+>                 ],
+>                 "stpPriority": 4096
+>             },
+>             {
+>                 "stacks": [
+>                     "789102",
+>                     "123456",
+>                     "129102"
+>                 ],
+>                 "stpPriority": 28672
+>             }
+>         ]
+>     }
+> 
+>   
+> 
+> PUT
+> 
+> _updateNetworkSwitchSettingsStp_  
+> **Updates STP settings**
+> 
+>     {
+>         "rstpEnabled": true,
+>         "stpBridgePriority": [
+>             {
+>                 "switches": [
+>                     "Q234-ABCD-0001",
+>                     "Q234-ABCD-0002",
+>                     "Q234-ABCD-0003"
+>                 ],
+>                 "stpPriority": 4096
+>             },
+>             {
+>                 "stacks": [
+>                     "789102",
+>                     "123456",
+>                     "129102"
+>                 ],
+>                 "stpPriority": 28672
+>             }
+>         ]
+>     }
+
+* * *
+
+**Update switch network settings**
+
+#### PUT
+
+`/networks/{networkId}/switch/settings`
+
+> Optional property `vlan` Added
+
+* * *
+
+**Returns the switch network settings**
+
+#### GET
+
+`/networks/{networkId}/switch/settings`
+
+> Response property `vlan` value added:
+> 
+>            
+>             {
+>               vlan: 100
+>             }
+>     
+
+* * *
+
+### Uplink settings
+
+**Updates the uplink settings for your MX network.**
+
+#### PUT
+
+`/networks/{networkId}/uplinkSettings`
+
+> Property `limitUp` Deleted
+
+> Property `limitDown` Deleted
+
+> Optional property `wan1` Added
+
+> Optional property `wan2` Added
+
+> Optional property `cellular` Added
+
+* * *
+
+### Organizations
+
+**List the organizations that the user has privileges on**
+
+#### GET
+
+`/organizations`
+
+> Response property `url` value added:
+> 
+>            
+>             {
+>               url: "https://dashboard.meraki.com/o/VjjsAd/manage/organization/overview"
+>             }
+>     
+
+* * *
+
+**Return an organization**
+
+#### GET
+
+`/organizations/{organizationId}`
+
+> Response property `url` value added:
+> 
+>            
+>             {
+>               url: "https://dashboard.meraki.com/o/VjjsAd/manage/organization/overview"
+>             }
+>     
+
+* * *
+
+### Admins
+
+**Update an administrator**
+
+#### PUT
+
+`/organizations/{organizationId}/admins/{id}`
+
+> Property `email` Deleted
+
+* * *
+
+### Connectivity monitoring destinations
+
+#### PATH
+
+`/networks/{networkId}/connectivityMonitoringDestinations`
+
+> Path added  
+> 
+> GET
+> 
+> _getNetworkConnectivityMonitoringDestinations_  
+> **Return the connectivity testing destinations for an MX network**
+> 
+>     {
+>         "destinations": [
+>             {
+>                 "ip": "8.8.8.8",
+>                 "description": "Google",
+>                 "default": false
+>             },
+>             {
+>                 "ip": "1.23.45.67",
+>                 "description": "test description",
+>                 "default": true
+>             },
+>             {
+>                 "ip": "9.8.7.6",
+>                 "description": null,
+>                 "default": false
+>             }
+>         ]
+>     }
+> 
+>   
+> 
+> PUT
+> 
+> _updateNetworkConnectivityMonitoringDestinations_  
+> **Update the connectivity testing destinations for an MX network**
+> 
+>     {
+>         "destinations": [
+>             {
+>                 "ip": "8.8.8.8",
+>                 "description": "Google",
+>                 "default": false
+>             },
+>             {
+>                 "ip": "1.23.45.67",
+>                 "description": "test description",
+>                 "default": true
+>             },
+>             {
+>                 "ip": "9.8.7.6",
+>                 "description": null,
+>                 "default": false
+>             }
+>         ]
+>     }
+
+* * *
+
+### Events
+
+#### PATH
+
+`/networks/{networkId}/events`
+
+> Path added  
+> 
+> GET
+> 
+> _getNetworkEvents_  
+> **List the events for the network**
+> 
+>     {
+>         "message": null,
+>         "pageStartAt": "2018-02-11T00:00:00.090210Z",
+>         "pageEndAt": "2018-02-11T00:00:00.090210Z",
+>         "events": [
+>             {
+>                 "occurredAt": "2018-02-11T00:00:00.090210Z",
+>                 "networkId": "N_24329156",
+>                 "type": "association",
+>                 "description": "802.11 association",
+>                 "clientId": "k74272e",
+>                 "clientDescription": "Miles's phone",
+>                 "deviceSerial": "Q234-ABCD-5678",
+>                 "deviceName": "My AP",
+>                 "ssidNumber": 1,
+>                 "ssidName": "My SSID",
+>                 "eventData": {
+>                     "radio": "1",
+>                     "vap": "1",
+>                     "client_mac": "22:33:44:55:66:77",
+>                     "client_ip": "1.2.3.4",
+>                     "channel": "36",
+>                     "rssi": "12",
+>                     "aid": "2104009183"
+>                 }
+>             }
+>         ]
+>     }
+
+* * *
+
+#### PATH
+
+`/networks/{networkId}/events/eventTypes`
+
+> Path added  
+> 
+> GET
+> 
+> _getNetworkEventsEventTypes_  
+> **List the event type to human-readable description**
 > 
 >     [
 >         {
->             "name": "My Geofence",
->             "description": "This is a sample geofence",
->             "maxTimeOutside": 5
->         }
->     ]
-> 
->   
-> 
-> POST
-> 
-> _createNetworkSmGeofence_  
-> **Add a new geofence**
-> 
->     {
->         "name": "My Geofence",
->         "description": "This is a sample geofence",
->         "maxTimeOutside": 5
->     }
-
-* * *
-
-#### PATH
-
-`/networks/{networkId}/sm/geofences/{geofenceId}`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkSmGeofence_  
-> **Returns a specific geofence**
-> 
->     {
->         "name": "My Geofence",
->         "description": "This is a sample geofence",
->         "maxTimeOutside": 5
->     }
-> 
->   
-> 
-> PUT
-> 
-> _updateNetworkSmGeofence_  
-> **Update a geofence**
-> 
->     {
->         "name": "My Geofence",
->         "description": "This is a sample geofence",
->         "maxTimeOutside": 5
->     }
-
-* * *
-
-#### PATH
-
-`/networks/{networkId}/sm/geofences/{geofence_id}`
-
-> Path added  
-> 
-> DELETE
-> 
-> _deleteNetworkSmGeofence_  
-> **Delete a geofence**
-
-* * *
-
-### Tags
-
-#### PATH
-
-`/networks/{networkId}/sm/tags`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkSmTags_  
-> **List the tags on this node group**
-> 
->     [
->         {
->             "name": "Geofence Tag",
->             "type": "geofence",
->             "scope": "withAll",
->             "tags": [
->                 "tag",
->                 "test"
->             ]
->         }
->     ]
-
-* * *
-
-#### PATH
-
-`/networks/{networkId}/sm/tags/{tagId}`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkSmTag_  
-> **Show a specific tag**
-> 
->     {
->         "name": "Geofence Tag",
->         "type": "geofence",
->         "scope": "withAll",
->         "tags": [
->             "tag",
->             "test"
->         ]
->     }
-> 
->   
-> 
-> POST
-> 
-> _createNetworkSmTag_  
-> **Add a new tag**
-> 
->     {
->         "name": "Geofence Tag",
->         "type": "geofence",
->         "scope": "withAll",
->         "tags": [
->             "tag",
->             "test"
->         ]
->     }
-> 
->   
-> 
-> PUT
-> 
-> _updateNetworkSmTag_  
-> **Update a tag**
-> 
->     {
->         "name": "Geofence Tag",
->         "type": "geofence",
->         "scope": "withAll",
->         "tags": [
->             "tag",
->             "test"
->         ]
->     }
-> 
->   
-> 
-> DELETE
-> 
-> _deleteNetworkSmTag_  
-> **Delete a tag**
-
-* * *
-
-#### PATH
-
-`/networks/{networkId}/sm/tags/{tagId}/scopedDevices`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkSmTagScopedDevices_  
-> **Get the devices in scope of this tag**
-> 
->     {
->         "name": "Geofence Tag",
->         "type": "geofence",
->         "scope": "withAll",
->         "tags": [
->             "tag",
->             "test"
->         ]
->     }
-
-* * *
-
-### Traffic shaping
-
-#### PATH
-
-`/networks/{networkId}/trafficShaping`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkTrafficShaping_  
-> **Display the traffic shaping settings for an MX network**
-> 
->     {
->         "defaultRulesEnabled": true,
->         "rules": [
->             {
->                 "definitions": [
->                     {
->                         "type": "host",
->                         "value": "google.com"
->                     },
->                     {
->                         "type": "port",
->                         "value": "9090"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0/16"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "10.1.0.0/16:80"
->                     },
->                     {
->                         "type": "localNet",
->                         "value": "192.168.0.0/16"
->                     },
->                     {
->                         "type": "applicationCategory",
->                         "value": {
->                             "id": "meraki:layer7/category/2",
->                             "name": "Blogging"
->                         }
->                     },
->                     {
->                         "type": "application",
->                         "value": {
->                             "id": "meraki:layer7/application/133",
->                             "name": "Battle.net"
->                         }
->                     }
->                 ],
->                 "perClientBandwidthLimits": {
->                     "settings": "custom",
->                     "bandwidthLimits": {
->                         "limitUp": 1000000,
->                         "limitDown": 1000000
->                     }
->                 },
->                 "dscpTagValue": null,
->                 "priority": "normal"
->             }
->         ]
->     }
-> 
->   
-> 
-> PUT
-> 
-> _updateNetworkTrafficShaping_  
-> **Update the traffic shaping settings for an MX network**
-> 
->     {
->         "defaultRulesEnabled": true,
->         "rules": [
->             {
->                 "definitions": [
->                     {
->                         "type": "host",
->                         "value": "google.com"
->                     },
->                     {
->                         "type": "port",
->                         "value": "9090"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0/16"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "10.1.0.0/16:80"
->                     },
->                     {
->                         "type": "localNet",
->                         "value": "192.168.0.0/16"
->                     },
->                     {
->                         "type": "applicationCategory",
->                         "value": {
->                             "id": "meraki:layer7/category/2",
->                             "name": "Blogging"
->                         }
->                     },
->                     {
->                         "type": "application",
->                         "value": {
->                             "id": "meraki:layer7/application/133",
->                             "name": "Battle.net"
->                         }
->                     }
->                 ],
->                 "perClientBandwidthLimits": {
->                     "settings": "custom",
->                     "bandwidthLimits": {
->                         "limitUp": 1000000,
->                         "limitDown": 1000000
->                     }
->                 },
->                 "dscpTagValue": null,
->                 "priority": "normal"
->             }
->         ]
->     }
-
-* * *
-
-#### PATH
-
-`/networks/{networkId}/ssids/{number}/trafficShaping`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkSsidTrafficShaping_  
-> **Display the traffic shaping settings for a SSID on an MR network**
-> 
->     {
->         "trafficShapingEnabled": true,
->         "defaultRulesEnabled": true,
->         "rules": [
->             {
->                 "definitions": [
->                     {
->                         "type": "host",
->                         "value": "google.com"
->                     },
->                     {
->                         "type": "port",
->                         "value": "9090"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0/16"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "10.1.0.0/16:80"
->                     },
->                     {
->                         "type": "localNet",
->                         "value": "192.168.0.0/16"
->                     },
->                     {
->                         "type": "applicationCategory",
->                         "value": {
->                             "id": "meraki:layer7/category/2",
->                             "name": "Blogging"
->                         }
->                     },
->                     {
->                         "type": "application",
->                         "value": {
->                             "id": "meraki:layer7/application/133",
->                             "name": "Battle.net"
->                         }
->                     }
->                 ],
->                 "perClientBandwidthLimits": {
->                     "settings": "custom",
->                     "bandwidthLimits": {
->                         "limitUp": 1000000,
->                         "limitDown": 1000000
->                     }
->                 },
->                 "dscpTagValue": null,
->                 "pcpTagValue": null
->             }
->         ]
->     }
-> 
->   
-> 
-> PUT
-> 
-> _updateNetworkSsidTrafficShaping_  
-> **Update the traffic shaping settings for an SSID on an MR network**
-> 
->     {
->         "trafficShapingEnabled": true,
->         "defaultRulesEnabled": true,
->         "rules": [
->             {
->                 "definitions": [
->                     {
->                         "type": "host",
->                         "value": "google.com"
->                     },
->                     {
->                         "type": "port",
->                         "value": "9090"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "192.1.0.0/16"
->                     },
->                     {
->                         "type": "ipRange",
->                         "value": "10.1.0.0/16:80"
->                     },
->                     {
->                         "type": "localNet",
->                         "value": "192.168.0.0/16"
->                     },
->                     {
->                         "type": "applicationCategory",
->                         "value": {
->                             "id": "meraki:layer7/category/2",
->                             "name": "Blogging"
->                         }
->                     },
->                     {
->                         "type": "application",
->                         "value": {
->                             "id": "meraki:layer7/application/133",
->                             "name": "Battle.net"
->                         }
->                     }
->                 ],
->                 "perClientBandwidthLimits": {
->                     "settings": "custom",
->                     "bandwidthLimits": {
->                         "limitUp": 1000000,
->                         "limitDown": 1000000
->                     }
->                 },
->                 "dscpTagValue": null,
->                 "pcpTagValue": null
->             }
->         ]
->     }
-
-* * *
-
-#### PATH
-
-`/networks/{networkId}/trafficShaping/dscpTaggingOptions`
-
-> Path added  
-> 
-> GET
-> 
-> _getNetworkTrafficShapingDscpTaggingOptions_  
-> **Returns the available DSCP tagging options for your traffic shaping rules.**
-> 
->     [
->         {
->             "dscpTagValue": 10,
->             "description": "AF11 - High Throughput, Latency Insensitive, Low Drop"
->         },
->         {
->             "dscpTagValue": 12,
->             "description": "AF12 - High Throughput, Latency Insensitive, Medium Drop"
->         },
->         {
->             "dscpTagValue": 14,
->             "description": "AF13 - High Throughput, Latency Insensitive, High Drop"
->         },
->         {
->             "dscpTagValue": 18,
->             "description": "AF21 - Low Latency Data, Low Drop"
+>             "category": "802.11",
+>             "type": "association",
+>             "description": "802.11 association"
 >         }
 >     ]
 
 * * *
 
+### Floorplans
+
 #### PATH
 
-`/networks/{networkId}/trafficShaping/applicationCategories`
+`/networks/{networkId}/floorPlans`
 
 > Path added  
 > 
 > GET
 > 
-> _getNetworkTrafficShapingApplicationCategories_  
-> **Returns the application categories for traffic shaping rules.**
+> _getNetworkFloorPlans_  
+> **List the floor plans that belong to your network**
 > 
 >     [
 >         {
->             "applicationCategories": [
+>             "floorPlanId": "g_1234567",
+>             "imageUrl": "https://meraki-na.s3.amazonaws.com/assets/...",
+>             "imageUrlExpiresAt": "2019-06-11 16:04:54 +00:00",
+>             "imageExtension": "png",
+>             "imageMd5": "2a9edd3f4ffd80130c647d13eacb59f3",
+>             "name": "HQ Floor Plan",
+>             "devices": [
 >                 {
->                     "id": "meraki:layer7/category/24",
->                     "name": "Advertising",
->                     "applications": [
->                         {
->                             "id": "meraki:layer7/application/5",
->                             "name": "Advertising.com"
->                         },
->                         {
->                             "id": "meraki:layer7/application/0",
->                             "name": "AppNexus"
->                         },
->                         {
->                             "id": "meraki:layer7/application/1",
->                             "name": "Brightroll"
->                         }
->                     ]
+>                     "name": "My AP",
+>                     "lat": 37.4180951010362,
+>                     "lng": -122.098531723022,
+>                     "serial": "Q234-ABCD-5678",
+>                     "mac": "00:11:22:33:44:55",
+>                     "model": "MR34",
+>                     "address": "1600 Pennsylvania Ave",
+>                     "notes": "My AP's note",
+>                     "lanIp": "1.2.3.4",
+>                     "tags": " recently-added ",
+>                     "networkId": "N_24329156",
+>                     "beaconIdParams": {
+>                         "uuid": "00000000-0000-0000-0000-000000000000",
+>                         "major": 5,
+>                         "minor": 3
+>                     },
+>                     "firmware": "wireless-25-14",
+>                     "floorPlanId": "g_1234567"
 >                 }
->             ]
+>             ],
+>             "width": 100,
+>             "height": 150,
+>             "center": {
+>                 "lat": 37.770040510499996,
+>                 "lng": -122.38714009525
+>             },
+>             "bottomLeftCorner": {
+>                 "lat": 37.7696461495,
+>                 "lng": -122.3880815506
+>             },
+>             "bottomRightCorner": {
+>                 "lat": 37.771524649766654,
+>                 "lng": -122.38795275055205
+>             },
+>             "topLeftCorner": {
+>                 "lat": 37.769700101836364,
+>                 "lng": -122.3888684251381
+>             },
+>             "topRightCorner": {
+>                 "lat": 37.77157860210302,
+>                 "lng": -122.38873962509012
+>             }
 >         }
 >     ]
-
-* * *
-
-### Uplink interface settings
-
-#### PATH
-
-`/networks/{networkdId}/devices/{serial}/uplinkInterfaceSettings`
-
-> Path added  
 > 
-> GET
+>   
 > 
-> _getNetworkDeviceUplinkInterfaceSettings_  
-> **Return the uplink interface settings for a device**
+> POST
+> 
+> _createNetworkFloorPlan_  
+> **Upload a floor plan**
 > 
 >     {
->         "wan1": {
->             "usingStaticIp": true,
->             "staticIp": "1.2.3.4",
->             "staticSubnetMask": "255.255.255.0",
->             "staticGatewayIp": "1.2.3.1",
->             "staticDns": [
->                 "1.2.3.2",
->                 "1.2.3.3"
->             ],
->             "vlan": 7
+>         "floorPlanId": "g_1234567",
+>         "imageUrl": "https://meraki-na.s3.amazonaws.com/assets/...",
+>         "imageUrlExpiresAt": "2019-06-11 16:04:54 +00:00",
+>         "imageExtension": "png",
+>         "imageMd5": "2a9edd3f4ffd80130c647d13eacb59f3",
+>         "name": "HQ Floor Plan",
+>         "devices": [
+>             {
+>                 "name": "My AP",
+>                 "lat": 37.4180951010362,
+>                 "lng": -122.098531723022,
+>                 "serial": "Q234-ABCD-5678",
+>                 "mac": "00:11:22:33:44:55",
+>                 "model": "MR34",
+>                 "address": "1600 Pennsylvania Ave",
+>                 "notes": "My AP's note",
+>                 "lanIp": "1.2.3.4",
+>                 "tags": " recently-added ",
+>                 "networkId": "N_24329156",
+>                 "beaconIdParams": {
+>                     "uuid": "00000000-0000-0000-0000-000000000000",
+>                     "major": 5,
+>                     "minor": 3
+>                 },
+>                 "firmware": "wireless-25-14",
+>                 "floorPlanId": "g_1234567"
+>             }
+>         ],
+>         "width": 100,
+>         "height": 150,
+>         "center": {
+>             "lat": 37.770040510499996,
+>             "lng": -122.38714009525
 >         },
->         "wan2": {
->             "usingStaticIp": false,
->             "vlan": 2
+>         "bottomLeftCorner": {
+>             "lat": 37.7696461495,
+>             "lng": -122.3880815506
+>         },
+>         "bottomRightCorner": {
+>             "lat": 37.771524649766654,
+>             "lng": -122.38795275055205
+>         },
+>         "topLeftCorner": {
+>             "lat": 37.769700101836364,
+>             "lng": -122.3888684251381
+>         },
+>         "topRightCorner": {
+>             "lat": 37.77157860210302,
+>             "lng": -122.38873962509012
 >         }
 >     }
 
@@ -1955,87 +1123,370 @@ Changes
 
 #### PATH
 
-`/networks/{networkId}/devices/{serial}/uplinkInterfaceSettings`
+`/networks/{networkId}/floorPlans/{floorPlanId}`
 
 > Path added  
+> 
+> GET
+> 
+> _getNetworkFloorPlan_  
+> **Find a floor plan by ID**
+> 
+>     {
+>         "floorPlanId": "g_1234567",
+>         "imageUrl": "https://meraki-na.s3.amazonaws.com/assets/...",
+>         "imageUrlExpiresAt": "2019-06-11 16:04:54 +00:00",
+>         "imageExtension": "png",
+>         "imageMd5": "2a9edd3f4ffd80130c647d13eacb59f3",
+>         "name": "HQ Floor Plan",
+>         "devices": [
+>             {
+>                 "name": "My AP",
+>                 "lat": 37.4180951010362,
+>                 "lng": -122.098531723022,
+>                 "serial": "Q234-ABCD-5678",
+>                 "mac": "00:11:22:33:44:55",
+>                 "model": "MR34",
+>                 "address": "1600 Pennsylvania Ave",
+>                 "notes": "My AP's note",
+>                 "lanIp": "1.2.3.4",
+>                 "tags": " recently-added ",
+>                 "networkId": "N_24329156",
+>                 "beaconIdParams": {
+>                     "uuid": "00000000-0000-0000-0000-000000000000",
+>                     "major": 5,
+>                     "minor": 3
+>                 },
+>                 "firmware": "wireless-25-14",
+>                 "floorPlanId": "g_1234567"
+>             }
+>         ],
+>         "width": 100,
+>         "height": 150,
+>         "center": {
+>             "lat": 37.770040510499996,
+>             "lng": -122.38714009525
+>         },
+>         "bottomLeftCorner": {
+>             "lat": 37.7696461495,
+>             "lng": -122.3880815506
+>         },
+>         "bottomRightCorner": {
+>             "lat": 37.771524649766654,
+>             "lng": -122.38795275055205
+>         },
+>         "topLeftCorner": {
+>             "lat": 37.769700101836364,
+>             "lng": -122.3888684251381
+>         },
+>         "topRightCorner": {
+>             "lat": 37.77157860210302,
+>             "lng": -122.38873962509012
+>         }
+>     }
+> 
+>   
 > 
 > PUT
 > 
-> _updateNetworkDeviceUplinkInterfaceSettings_  
-> **Update the uplink interface settings for a device**
+> _updateNetworkFloorPlan_  
+> **Update a floor plan's geolocation and other meta data**
 > 
 >     {
->         "wan1": {
->             "usingStaticIp": true,
->             "staticIp": "1.2.3.4",
->             "staticSubnetMask": "255.255.255.0",
->             "staticGatewayIp": "1.2.3.1",
->             "staticDns": [
->                 "1.2.3.2",
->                 "1.2.3.3"
->             ],
->             "vlan": 7
+>         "floorPlanId": "g_1234567",
+>         "imageUrl": "https://meraki-na.s3.amazonaws.com/assets/...",
+>         "imageUrlExpiresAt": "2019-06-11 16:04:54 +00:00",
+>         "imageExtension": "png",
+>         "imageMd5": "2a9edd3f4ffd80130c647d13eacb59f3",
+>         "name": "HQ Floor Plan",
+>         "devices": [
+>             {
+>                 "name": "My AP",
+>                 "lat": 37.4180951010362,
+>                 "lng": -122.098531723022,
+>                 "serial": "Q234-ABCD-5678",
+>                 "mac": "00:11:22:33:44:55",
+>                 "model": "MR34",
+>                 "address": "1600 Pennsylvania Ave",
+>                 "notes": "My AP's note",
+>                 "lanIp": "1.2.3.4",
+>                 "tags": " recently-added ",
+>                 "networkId": "N_24329156",
+>                 "beaconIdParams": {
+>                     "uuid": "00000000-0000-0000-0000-000000000000",
+>                     "major": 5,
+>                     "minor": 3
+>                 },
+>                 "firmware": "wireless-25-14",
+>                 "floorPlanId": "g_1234567"
+>             }
+>         ],
+>         "width": 100,
+>         "height": 150,
+>         "center": {
+>             "lat": 37.770040510499996,
+>             "lng": -122.38714009525
 >         },
->         "wan2": {
->             "usingStaticIp": false,
->             "vlan": 2
+>         "bottomLeftCorner": {
+>             "lat": 37.7696461495,
+>             "lng": -122.3880815506
+>         },
+>         "bottomRightCorner": {
+>             "lat": 37.771524649766654,
+>             "lng": -122.38795275055205
+>         },
+>         "topLeftCorner": {
+>             "lat": 37.769700101836364,
+>             "lng": -122.3888684251381
+>         },
+>         "topRightCorner": {
+>             "lat": 37.77157860210302,
+>             "lng": -122.38873962509012
+>         }
+>     }
+> 
+>   
+> 
+> DELETE
+> 
+> _deleteNetworkFloorPlan_  
+> **Destroy a floor plan**
+
+* * *
+
+### Wireless settings
+
+#### PATH
+
+`/networks/{networkId}/wireless/settings`
+
+> Path added  
+> 
+> GET
+> 
+> _getNetworkWirelessSettings_  
+> **Return the wireless settings for a network**
+> 
+>     {
+>         "meshingEnabled": true,
+>         "ipv6BridgeEnabled": false,
+>         "locationAnalyticsEnabled": false
+>     }
+> 
+>   
+> 
+> PUT
+> 
+> _updateNetworkWirelessSettings_  
+> **Update the wireless settings for a network**
+> 
+>     {
+>         "meshingEnabled": true,
+>         "ipv6BridgeEnabled": false,
+>         "locationAnalyticsEnabled": false
+>     }
+
+* * *
+
+### Dashboard branding policies
+
+#### PATH
+
+`/organizations/{organizationId}/brandingPolicies`
+
+> Path added  
+> 
+> GET
+> 
+> _getOrganizationBrandingPolicies_  
+> **List the branding policies of an organization**
+> 
+>     [
+>         {
+>             "brandingPolicyId": "456",
+>             "name": "My Branding Policy",
+>             "enabled": true,
+>             "adminSettings": {
+>                 "appliesTo": "All admins of networks...",
+>                 "values": [
+>                     "N_1234",
+>                     "L_5678"
+>                 ]
+>             },
+>             "helpSettings": {
+>                 "helpTab": "show",
+>                 "getHelpSubtab": "default or inherit",
+>                 "communitySubtab": "show",
+>                 "casesSubtab": "hide",
+>                 "dataProtectionRequestsSubtab": "default or inherit",
+>                 "getHelpSubtabKnowledgeBaseSearch": "<h1>Some custom HTML content</h1>",
+>                 "universalSearchKnowledgeBaseSearch": "hide",
+>                 "ciscoMerakiProductDocumentation": "show",
+>                 "supportContactInfo": "show",
+>                 "newFeaturesSubtab": "show",
+>                 "firewallInfoSubtab": "hide",
+>                 "apiDocsSubtab": "default or inherit",
+>                 "hardwareReplacementsSubtab": "hide",
+>                 "smForums": "hide"
+>             }
+>         }
+>     ]
+> 
+>   
+> 
+> POST
+> 
+> _createOrganizationBrandingPolicy_  
+> **Add a new branding policy to an organization**
+> 
+>     {
+>         "brandingPolicyId": "456",
+>         "name": "My Branding Policy",
+>         "enabled": true,
+>         "adminSettings": {
+>             "appliesTo": "All admins of networks...",
+>             "values": [
+>                 "N_1234",
+>                 "L_5678"
+>             ]
+>         },
+>         "helpSettings": {
+>             "helpTab": "show",
+>             "getHelpSubtab": "default or inherit",
+>             "communitySubtab": "show",
+>             "casesSubtab": "hide",
+>             "dataProtectionRequestsSubtab": "default or inherit",
+>             "getHelpSubtabKnowledgeBaseSearch": "<h1>Some custom HTML content</h1>",
+>             "universalSearchKnowledgeBaseSearch": "hide",
+>             "ciscoMerakiProductDocumentation": "show",
+>             "supportContactInfo": "show",
+>             "newFeaturesSubtab": "show",
+>             "firewallInfoSubtab": "hide",
+>             "apiDocsSubtab": "default or inherit",
+>             "hardwareReplacementsSubtab": "hide",
+>             "smForums": "hide"
 >         }
 >     }
 
 * * *
 
-### Webhook logs
-
 #### PATH
 
-`/organizations/{organizationId}/webhookLogs`
+`/organizations/{organizationId}/brandingPolicies/priorities`
 
 > Path added  
 > 
 > GET
 > 
-> _getOrganizationWebhookLogs_  
-> **Return the log of webhook POSTs sent**
+> _getOrganizationBrandingPoliciesPriorities_  
+> **Return the branding policy IDs of an organization in priority order. IDs are ordered in ascending order of priority (IDs later in the array have higher priority).**
 > 
->     [
->         {
->             "organizationId": "33619",
->             "networkId": "L_22742",
->             "alertType": "Settings changed",
->             "url": "https://www.example.com/path",
->             "sentAt": "2019-01-01T13:37:28.123456Z",
->             "loggedAt": "2019-01-01T13:37:28.423456Z",
->             "responseCode": 200,
->             "responseDuration": 244
+>     {
+>         "brandingPolicyIds": [
+>             "123",
+>             "456",
+>             "789"
+>         ]
+>     }
+> 
+>   
+> 
+> PUT
+> 
+> _updateOrganizationBrandingPoliciesPriorities_  
+> **Update the priority ordering of an organization's branding policies.**
+> 
+>     {
+>         "brandingPolicyIds": [
+>             "123",
+>             "456",
+>             "789"
+>         ]
+>     }
+
+* * *
+
+#### PATH
+
+`/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}`
+
+> Path added  
+> 
+> GET
+> 
+> _getOrganizationBrandingPolicy_  
+> **Return a branding policy**
+> 
+>     {
+>         "brandingPolicyId": "456",
+>         "name": "My Branding Policy",
+>         "enabled": true,
+>         "adminSettings": {
+>             "appliesTo": "All admins of networks...",
+>             "values": [
+>                 "N_1234",
+>                 "L_5678"
+>             ]
+>         },
+>         "helpSettings": {
+>             "helpTab": "show",
+>             "getHelpSubtab": "default or inherit",
+>             "communitySubtab": "show",
+>             "casesSubtab": "hide",
+>             "dataProtectionRequestsSubtab": "default or inherit",
+>             "getHelpSubtabKnowledgeBaseSearch": "<h1>Some custom HTML content</h1>",
+>             "universalSearchKnowledgeBaseSearch": "hide",
+>             "ciscoMerakiProductDocumentation": "show",
+>             "supportContactInfo": "show",
+>             "newFeaturesSubtab": "show",
+>             "firewallInfoSubtab": "hide",
+>             "apiDocsSubtab": "default or inherit",
+>             "hardwareReplacementsSubtab": "hide",
+>             "smForums": "hide"
 >         }
->     ]
-
-* * *
-
-### IDS alerts
-
-#### PATH
-
-`/ids_alerts?start_time=<float_start_time>&end_time=<optional_float_end_time>`
-
-> Path added  
+>     }
 > 
-> GET
+>   
 > 
-> _getIds\_alerts?start\_time=&end\_time=_  
-> **Query a shard for up to the last 24 hours of IDS alert data**
-
-* * *
-
-#### PATH
-
-`/ids_alerts/packet?q_ts=<ids_alert_timestamp>q_organization_id=<organization_id>&q_network_id=<network_id>`
-
-> Path added  
+> PUT
 > 
-> GET
+> _updateOrganizationBrandingPolicy_  
+> **Update a branding policy**
 > 
-> _getIds\_alertsPacket?q\_ts=q\_organization\_id=&q\_network\_id=_  
-> **Query a single network for the packet that generated the ids alert at the given timestamp**
+>     {
+>         "brandingPolicyId": "456",
+>         "name": "My Branding Policy",
+>         "enabled": true,
+>         "adminSettings": {
+>             "appliesTo": "All admins of networks...",
+>             "values": [
+>                 "N_1234",
+>                 "L_5678"
+>             ]
+>         },
+>         "helpSettings": {
+>             "helpTab": "show",
+>             "getHelpSubtab": "default or inherit",
+>             "communitySubtab": "show",
+>             "casesSubtab": "hide",
+>             "dataProtectionRequestsSubtab": "default or inherit",
+>             "getHelpSubtabKnowledgeBaseSearch": "<h1>Some custom HTML content</h1>",
+>             "universalSearchKnowledgeBaseSearch": "hide",
+>             "ciscoMerakiProductDocumentation": "show",
+>             "supportContactInfo": "show",
+>             "newFeaturesSubtab": "show",
+>             "firewallInfoSubtab": "hide",
+>             "apiDocsSubtab": "default or inherit",
+>             "hardwareReplacementsSubtab": "hide",
+>             "smForums": "hide"
+>         }
+>     }
+> 
+>   
+> 
+> DELETE
+> 
+> _deleteOrganizationBrandingPolicy_  
+> **Delete a branding policy**
 
 * * *

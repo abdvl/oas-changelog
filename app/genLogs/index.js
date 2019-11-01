@@ -55,8 +55,9 @@ module.exports = async function genLogs(
     context.diff = diff;
 
     writeJsonFile(context, location);
-    writeHtml(context, location);
+    const html = writeHtml(context, location);
     writeMarkdownFile(context, location);
 
+    context.html = html;
     return context;
 };
