@@ -1,19 +1,5 @@
-const SwaggerParser = require("swagger-parser");
-
-module.exports = async function mergeSpecWithChanges(diff, specPath) {
-    //const spec = await fs.readFileSync(specPath, "utf8");
-
-    const parsed = await SwaggerParser.parse(specPath)
-        .then(r => {
-            //console.log("r", r);
-            return r;
-        })
-        .catch(e => console.log("SwaggerParser error ", e));
-    // const paths = parsed.paths;
-
-    //console.log("parsed", parsed);
-    const paths = parsed.paths;
-    //console.log("paths", paths);
+module.exports = async function mergeSpecWithChanges(diff, newSpec) {
+    const paths = newSpec.paths;
 
     diff = diff.map(d => {
         pathDetails = paths[d.path];

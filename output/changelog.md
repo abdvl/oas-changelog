@@ -3,7 +3,7 @@ Meraki Dashboard API Changelog
 Changelog
 =========
 
-Version 0 to 0
+Version to
 
 Renamed
 -------

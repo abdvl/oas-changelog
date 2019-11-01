@@ -1,7 +1,7 @@
 const writeHtml = require("./writeFiles/html");
 const writeJsonFile = require("./writeFiles/json");
 const writeMarkdownFile = require("./writeFiles/markdown");
-const fs = require("fs");
+const SwaggerParser = require("swagger-parser");
 
 const changelog = require("../../swagger-changelog-merakified").changelog;
 const mergeSpecWithChanges = require("./mergeSpec");
@@ -27,29 +27,21 @@ const config = {
 };
 
 module.exports = async function genLogs(
-    oldSpec,
-    newSpec,
+    oldSpecPath,
+    newSpecPath,
     location = "./output"
 ) {
+    const oldSpec = await SwaggerParser.parse(oldSpecPath);
+    const newSpec = await SwaggerParser.parse(newSpecPath);
+
     const log = await changelog(oldSpec, newSpec, config);
     const res = await mergeSpecWithChanges(log.diff, newSpec);
     const diff = res;
 
     context = {};
 
-    if (typeof oldSpec === "object") {
-        context.oldSpec = oldSpec;
-    } else {
-        const oldSpecFile = JSON.parse(fs.readFileSync(oldSpec, "utf8"));
-        context.oldSpec = oldSpecFile;
-    }
-
-    if (typeof newSpec === "object") {
-        context.newSpec = newSpec;
-    } else {
-        const newSpecFile = JSON.parse(fs.readFileSync(newSpec, "utf8"));
-        context.newSpec = newSpecFile;
-    }
+    context.oldVersion = oldSpec.info.version;
+    context.newVersion = newSpec.info.version;
 
     context.uniqueNames = [...new Set(diff.map(item => item.name))];
     // move Renamed to top
