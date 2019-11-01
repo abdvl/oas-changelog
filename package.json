@@ -4,7 +4,7 @@
     "description": "A simple utility to generate a changelog between two OAS files.",
     "main": "index.js",
     "scripts": {
-        "server": "node ./app/index.js",
+        "start": "node ./app/index.js",
         "json-server": "http-server ./oas-file"
     },
     "author": "",
