@@ -1,412 +1,1132 @@
-<!DOCTYPE html><html lang="en"><head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"><link rel="stylesheet" href="style.css"><title>Meraki Dashboard API Changelog</title></head><body class="container">  <h1>Changelog</h1><p>Version 0.3.0 to 0.4.0 <!-- Group by Named Type--><h2 class="names">Renamed</h2><!-- Group by Group Tag--><h3></h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">`/networks/{networkID}/switchStacks/{switchStackId}/remove`</code><p class="ml-5"><blockquote><p>Path <code>`/networks/{networkID}/switchStacks/{switchStackId}/remove`</code> renamed to <code>/networks/{networkId}/switchStacks/{switchStackId}/remove</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h2 class="names">Updates</h2><!-- Group by Group Tag--><h3></h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkID}/switchStacks/{switchStackId}/remove</code><p class="ml-5"><blockquote><p>Deleted</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Networks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/siteToSiteVpn</code><p class="ml-5"><blockquote><p>Property <code>mode</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Param <code>updateNetworkSiteToSiteVpn</code> became required</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>SSIDs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the attributes of an SSID</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/ssids/{number}</code><p class="ml-5"><blockquote><p>Property <code>host</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>secret</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>host</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>secret</code> became required</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Radio settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Updates specified RF profile for this network</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/wireless/rfProfiles/{rfProfileId}</code><p class="ml-5"><blockquote><p>Property <code>minBitrate</code> type turn from <code>string</code> to <code>number</code></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>minBitrate</code> type turn from <code>string</code> to <code>integer</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><h2 class="names">Changes</h2><!-- Group by Group Tag--><h3>Networks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return a network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}</code><p class="ml-5"><blockquote><p>Response property <code>productTypes</code> value added:  
-      <pre><code>       
-        {
-          productTypes: ["appliance","switch","wireless"]
-        }
-</code></pre></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>    The traffic analysis data for this network.
-    &lt;a href=&quot;https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility&quot;&gt;Traffic Analysis with Hostname Visibility&lt;/a&gt; must be enabled on the network.
-</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/traffic</code><p class="ml-5"><blockquote><p>Optional param <code>t0</code> added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Summary changed from <code>The traffic analysis data for this network.
-<a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
-</code> to <code>    The traffic analysis data for this network.
-    <a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
-</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>List the networks in an organization</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/networks</code><p class="ml-5"><blockquote><p>Response property <code>productTypes</code> value added:  
-      <pre><code>       
-        {
-          productTypes: ["appliance","switch","wireless"]
-        }
-</code></pre></p></blockquote></p><hr><h3>SSIDs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the attributes of an SSID</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/ssids/{number}</code><p class="ml-5"><blockquote><p>Optional property <code>enterpriseAdminAccess</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>radiusAttributeForGroupPolicies</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>radiusOverride</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Bluetooth clients</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>List the Bluetooth clients seen by APs in this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/bluetoothClients</code><p class="ml-5"><blockquote><p>Optional param <code>t0</code> added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>id</code> value added:  
-      <pre><code>       
-        {
-          id: "1284392014819"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>name</code> value added:  
-      <pre><code>       
-        {
-          name: "Miles's phone"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>deviceName</code> value added:  
-      <pre><code>       
-        {
-          deviceName: "Bose QuietComfort 35"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>manufacturer</code> value added:  
-      <pre><code>       
-        {
-          manufacturer: "Bose"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>lastSeen</code> value added:  
-      <pre><code>       
-        {
-          lastSeen: 1526087474
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>seenByDeviceMac</code> value added:  
-      <pre><code>       
-        {
-          seenByDeviceMac: "00:11:22:33:44:55"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>inSightAlert</code> value added:  
-      <pre><code>       
-        {
-          inSightAlert: false
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>outOfSightAlert</code> value added:  
-      <pre><code>       
-        {
-          outOfSightAlert: false
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>tags</code> value added:  
-      <pre><code>       
-        {
-          tags: ["tag1","tag2"]
-        }
-</code></pre></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return a Bluetooth client. Bluetooth clients can be identified by their ID or their MAC.</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/bluetoothClients/{bluetoothClientId}</code><p class="ml-5"><blockquote><p>Response property <code>id</code> value added:  
-      <pre><code>       
-        {
-          id: "1284392014819"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>name</code> value added:  
-      <pre><code>       
-        {
-          name: "Miles's phone"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>deviceName</code> value added:  
-      <pre><code>       
-        {
-          deviceName: "Bose QuietComfort 35"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>manufacturer</code> value added:  
-      <pre><code>       
-        {
-          manufacturer: "Bose"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>lastSeen</code> value added:  
-      <pre><code>       
-        {
-          lastSeen: 1526087474
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>seenByDeviceMac</code> value added:  
-      <pre><code>       
-        {
-          seenByDeviceMac: "00:11:22:33:44:55"
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>inSightAlert</code> value added:  
-      <pre><code>       
-        {
-          inSightAlert: false
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>outOfSightAlert</code> value added:  
-      <pre><code>       
-        {
-          outOfSightAlert: false
-        }
-</code></pre></p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Response property <code>tags</code> value added:  
-      <pre><code>       
-        {
-          tags: ["tag1","tag2"]
-        }
-</code></pre></p></blockquote></p><hr><h3>Clients</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return the client associated with the given identifier. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/clients/{clientId}</code><p class="ml-5"><blockquote><p>Response property <code>status</code> value added:  
-      <pre><code>       
-        {
-          status: "Online"
-        }
-</code></pre></p></blockquote></p><hr><h3>Management interface settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Return the management interface settings for a device</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/managementInterfaceSettings</code><p class="ml-5"><blockquote><p>Response property <code>ddnsHostnames</code> value added:  
-      <pre><code>       
-        {
-          ddnsHostnames: {"activeDdnsHostname":"mx1-sample.dynamic-m.com","ddnsHostnameWan1":"mx1-sample-1.dynamic-m.com","ddnsHostnameWan2":"mx1-sample-2.dynamic-m.com"}
-        }
-</code></pre></p></blockquote></p><hr><h3>Switch settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings/qosRules</code><p class="ml-5"><blockquote><p>Path added
-      <br>
-      <div class="mr-4 badge get">GET</div> 
-      <i>getNetworkSwitchSettingsQosRules</i>
-      <br>
-      <b>List quality of service rules</b>
-      
-      <pre><code>[
-    {
-        &quot;id&quot;: &quot;1284392014819&quot;,
-        &quot;vlan&quot;: 100,
-        &quot;protocol&quot;: &quot;TCP&quot;,
-        &quot;srcPort&quot;: 2000,
-        &quot;srcPortRange&quot;: null,
-        &quot;dstPort&quot;: null,
-        &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
-        &quot;dscp&quot;: 0
-    }
-]</code></pre>
-      
+<!DOCTYPE html><html lang="en"><head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"><link rel="stylesheet" href="style.css"><title>Meraki Dashboard API Changelog</title></head><body class="container">  <h1>Changelog</h1><p>Version 0 to 0 <!-- Group by Named Type--><h2 class="names">Renamed</h2><!-- Group by Group Tag--><h3>Admins</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a new dashboard administrator</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/admins</code><p class="ml-5"><blockquote><p>Param <code>createOrganizationAdmins</code> renamed to <code>createOrganizationAdmin</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3></h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">`/devices/{serial}/camera/analytics/zones/{zoneId}/history`</code><p class="ml-5"><blockquote><p>Path <code>`/devices/{serial}/camera/analytics/zones/{zoneId}/history`</code> renamed to <code>/devices/{serial}/camera/analytics/zones/{zone_id}/history</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Networks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a network</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/networks</code><p class="ml-5"><blockquote><p>Param <code>createOrganizationNetworks</code> renamed to <code>createOrganizationNetwork</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Group policies</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a group policy</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/groupPolicies</code><p class="ml-5"><blockquote><p>Param <code>createNetworkGroupPolicies</code> renamed to <code>createNetworkGroupPolicy</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>HTTP servers</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add an HTTP server</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers</code><p class="ml-5"><blockquote><p>Param <code>createNetworkHttpServers</code> renamed to <code>createNetworkHttpServer</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Send a test webhook</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers/webhookTests</code><p class="ml-5"><blockquote><p>Param <code>createNetworkHttpServersWebhookTests</code> renamed to <code>createNetworkHttpServersWebhookTest</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Organizations</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a new organization</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations</code><p class="ml-5"><blockquote><p>Param <code>createOrganizations</code> renamed to <code>createOrganization</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>PII</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Submit a new delete or restrict processing PII request</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/pii/requests</code><p class="ml-5"><blockquote><p>Param <code>createNetworkPiiRequests</code> renamed to <code>createNetworkPiiRequest</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>SAML roles</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a SAML role</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/samlRoles</code><p class="ml-5"><blockquote><p>Param <code>createOrganizationSamlRoles</code> renamed to <code>createOrganizationSamlRole</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Named tag scope</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add a target group</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/targetGroups</code><p class="ml-5"><blockquote><p>Param <code>createNetworkSmTargetGroups</code> renamed to <code>createNetworkSmTargetGroup</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>SM</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update an existing Polaris app</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/app/polaris/{appId}</code><p class="ml-5"><blockquote><p>Param <code>updateNetworkSmAppPolari</code> renamed to <code>updateNetworkSmAppPolaris</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Switch stacks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a stack</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switchStacks</code><p class="ml-5"><blockquote><p>Param <code>createNetworkSwitchStacks</code> renamed to <code>createNetworkSwitchStack</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Static routes</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add a static route</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/staticRoutes</code><p class="ml-5"><blockquote><p>Param <code>createNetworkStaticRoutes</code> renamed to <code>createNetworkStaticRoute</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>VLANs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add a VLAN</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/vlans</code><p class="ml-5"><blockquote><p>Param <code>createNetworkVlans</code> renamed to <code>createNetworkVlan</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h2 class="names">Major</h2><!-- Group by Group Tag--><h3>Admins</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a new dashboard administrator</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/admins</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createOrganizationAdmins</code> to <code>createOrganizationAdmin</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3></h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/devices/{serial}/camera/analytics/zones/{zoneId}/history</code><p class="ml-5"><blockquote><p>Deleted</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Networks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a network</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/networks</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createOrganizationNetworks</code> to <code>createOrganizationNetwork</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Cameras</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Generate a snapshot of what the camera sees at the specified time and return a link to that image.</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/cameras/{serial}/snapshot</code><p class="ml-5"><blockquote><p>OperationId turned from <code>snapshotNetworkCamera</code> to <code>generateNetworkCameraSnapshot</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Devices</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Blink the LEDs on a device</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/blinkLeds</code><p class="ml-5"><blockquote><p>OperationId turned from <code>blinkLedsNetworkDevice</code> to <code>blinkNetworkDeviceLeds</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Group policies</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a group policy</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/groupPolicies</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkGroupPolicies</code> to <code>createNetworkGroupPolicy</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>HTTP servers</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add an HTTP server</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkHttpServers</code> to <code>createNetworkHttpServer</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Send a test webhook</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/httpServers/webhookTests</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkHttpServersWebhookTests</code> to <code>createNetworkHttpServersWebhookTest</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Organizations</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a new organization</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createOrganizations</code> to <code>createOrganization</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>PII</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Submit a new delete or restrict processing PII request</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/pii/requests</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkPiiRequests</code> to <code>createNetworkPiiRequest</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>SAML roles</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a SAML role</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/samlRoles</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createOrganizationSamlRoles</code> to <code>createOrganizationSamlRole</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Named tag scope</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add a target group</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/targetGroups</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkSmTargetGroups</code> to <code>createNetworkSmTargetGroup</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>SM</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update an existing Polaris app</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/app/polaris/{appId}</code><p class="ml-5"><blockquote><p>OperationId turned from <code>updateNetworkSmAppPolari</code> to <code>updateNetworkSmAppPolaris</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Lock a set of devices</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/devices/lock</code><p class="ml-5"><blockquote><p>OperationId turned from <code>updateNetworkSmDevicesLock</code> to <code>lockNetworkSmDevices</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Wipe a device</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/device/wipe</code><p class="ml-5"><blockquote><p>OperationId turned from <code>updateNetworkSmDeviceWipe</code> to <code>wipeNetworkSmDevice</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Force check-in a set of devices</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/devices/checkin</code><p class="ml-5"><blockquote><p>OperationId turned from <code>updateNetworkSmDevicesCheckin</code> to <code>checkinNetworkSmDevices</code></p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Move a set of devices to a new network</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/devices/move</code><p class="ml-5"><blockquote><p>OperationId turned from <code>updateNetworkSmDevicesMove</code> to <code>moveNetworkSmDevices</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Delete a Cisco Polaris app</strong></p><h4 class="mr-4 badge delete">DELETE  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/app/polaris/{appId}</code><p class="ml-5"><blockquote><p>OperationId turned from <code>deleteNetworkSmAppPolari</code> to <code>deleteNetworkSmAppPolaris</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Switch stacks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Create a stack</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switchStacks</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkSwitchStacks</code> to <code>createNetworkSwitchStack</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Syslog servers</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the syslog servers for a network</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/syslogServers</code><p class="ml-5"><blockquote><p>Property <code>host</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>port</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>roles</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>servers</code> became required</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Param <code>updateNetworkSyslogServers</code> became required</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Static routes</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add a static route</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/staticRoutes</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkStaticRoutes</code> to <code>createNetworkStaticRoute</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>VLANs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Add a VLAN</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/vlans</code><p class="ml-5"><blockquote><p>OperationId turned from <code>createNetworkVlans</code> to <code>createNetworkVlan</code></p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h2 class="names">Changes</h2><!-- Group by Group Tag--><h3>Networks</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/networks/combine</code><p class="ml-5"><blockquote><p>Path added
       <br>
       <div class="mr-4 badge post">POST</div> 
-      <i>createNetworkSwitchSettingsQosRule</i>
+      <i>combineOrganizationNetworks</i>
       <br>
-      <b>Add a quality of service rule</b>
+      <b>Combine multiple networks into a single network</b>
       
       <pre><code>{
-    &quot;id&quot;: &quot;1284392014819&quot;,
-    &quot;vlan&quot;: 100,
-    &quot;protocol&quot;: &quot;TCP&quot;,
-    &quot;srcPort&quot;: 2000,
-    &quot;srcPortRange&quot;: null,
-    &quot;dstPort&quot;: null,
-    &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
-    &quot;dscp&quot;: 0
+    &quot;resultingNetwork&quot;: {
+        &quot;id&quot;: &quot;L_123456&quot;,
+        &quot;organizationId&quot;: 2930418,
+        &quot;name&quot;: &quot;Long Island Office&quot;,
+        &quot;timeZone&quot;: &quot;America/Los_Angeles&quot;,
+        &quot;tags&quot;: &quot; tag1 tag2 &quot;,
+        &quot;type&quot;: &quot;combined&quot;,
+        &quot;disableMyMerakiCom&quot;: false
+    }
 }</code></pre>
-      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings/qosRules/order</code><p class="ml-5"><blockquote><p>Path added
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/split</code><p class="ml-5"><blockquote><p>Path added
       <br>
-      <div class="mr-4 badge get">GET</div> 
-      <i>getNetworkSwitchSettingsQosRulesOrder</i>
+      <div class="mr-4 badge post">POST</div> 
+      <i>splitNetwork</i>
       <br>
-      <b>Return the quality of service rule IDs by order in which they will be processed by the switch</b>
+      <b>Split a combined network into individual networks for each type of device</b>
       
       <pre><code>{
-    &quot;ruleIds&quot;: [
-        &quot;1284392014819&quot;,
-        &quot;2983092129865&quot;
-    ]
-}</code></pre>
-      
-      <br>
-      <div class="mr-4 badge put">PUT</div> 
-      <i>updateNetworkSwitchSettingsQosRulesOrder</i>
-      <br>
-      <b>Update the order in which the rules should be processed by the switch</b>
-      
-      <pre><code>{
-    &quot;ruleIds&quot;: [
-        &quot;1284392014819&quot;,
-        &quot;2983092129865&quot;
-    ]
-}</code></pre>
-      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings/qosRules/{qosRuleId}</code><p class="ml-5"><blockquote><p>Path added
-      <br>
-      <div class="mr-4 badge get">GET</div> 
-      <i>getNetworkSwitchSettingsQosRule</i>
-      <br>
-      <b>Return a quality of service rule</b>
-      
-      <pre><code>{
-    &quot;id&quot;: &quot;1284392014819&quot;,
-    &quot;vlan&quot;: 100,
-    &quot;protocol&quot;: &quot;TCP&quot;,
-    &quot;srcPort&quot;: 2000,
-    &quot;srcPortRange&quot;: null,
-    &quot;dstPort&quot;: null,
-    &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
-    &quot;dscp&quot;: 0
-}</code></pre>
-      
-      <br>
-      <div class="mr-4 badge put">PUT</div> 
-      <i>updateNetworkSwitchSettingsQosRule</i>
-      <br>
-      <b>Update a quality of service rule</b>
-      
-      <pre><code>{
-    &quot;id&quot;: &quot;1284392014819&quot;,
-    &quot;vlan&quot;: 100,
-    &quot;protocol&quot;: &quot;TCP&quot;,
-    &quot;srcPort&quot;: 2000,
-    &quot;srcPortRange&quot;: null,
-    &quot;dstPort&quot;: null,
-    &quot;dstPortRange&quot;: &quot;3000-3100&quot;,
-    &quot;dscp&quot;: 0
-}</code></pre>
-      
-      <br>
-      <div class="mr-4 badge delete">DELETE</div> 
-      <i>deleteNetworkSwitchSettingsQosRule</i>
-      <br>
-      <b>Delete a quality of service rule</b>
-      
-      <pre><code></code></pre>
-      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update switch network settings</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings</code><p class="ml-5"><blockquote><p>Optional property <code>vlan</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Returns the switch network settings</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/switch/settings</code><p class="ml-5"><blockquote><p>Response property <code>vlan</code> value added:  
-      <pre><code>       
+    &quot;resultingNetworks&quot;: [
         {
-          vlan: 100
-        }
-</code></pre></p></blockquote></p><hr><h3>Uplink settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Updates the uplink settings for your MX network.</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/uplinkSettings</code><p class="ml-5"><blockquote><p>Property <code>limitUp</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Property <code>limitDown</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>wan1</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>wan2</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>cellular</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Admins</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update an administrator</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/admins/{id}</code><p class="ml-5"><blockquote><p>Property <code>email</code> Deleted</p></blockquote></p><hr><!-- Limit duplicate path details   --><h3>Devices</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>List the devices in an organization</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/devices</code><p class="ml-5"><blockquote><p>Response property <code>firmware</code> value added:  
-      <pre><code>       
-        {
-          firmware: "wireless-25-14"
-        }
-</code></pre></p></blockquote></p><hr><h3>Dashboard branding policies</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/brandingPolicies</code><p class="ml-5"><blockquote><p>Path added
-      <br>
-      <div class="mr-4 badge get">GET</div> 
-      <i>getOrganizationBrandingPolicies</i>
-      <br>
-      <b>List the branding policies of an organization</b>
-      
-      <pre><code>[
-    {
-        &quot;brandingPolicyId&quot;: &quot;456&quot;,
-        &quot;name&quot;: &quot;My Branding Policy&quot;,
-        &quot;enabled&quot;: true,
-        &quot;adminSettings&quot;: {
-            &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
-            &quot;values&quot;: [
-                &quot;N_1234&quot;,
-                &quot;L_5678&quot;
-            ]
+            &quot;id&quot;: &quot;N_1234&quot;,
+            &quot;organizationId&quot;: 2930418,
+            &quot;name&quot;: &quot;Long Island Office - switch&quot;,
+            &quot;timeZone&quot;: &quot;America/Los_Angeles&quot;,
+            &quot;tags&quot;: &quot; tag1 tag2 &quot;,
+            &quot;type&quot;: &quot;switch&quot;,
+            &quot;disableMyMerakiCom&quot;: false
         },
-        &quot;helpSettings&quot;: {
-            &quot;helpTab&quot;: &quot;show&quot;,
-            &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
-            &quot;communitySubtab&quot;: &quot;show&quot;,
-            &quot;casesSubtab&quot;: &quot;hide&quot;,
-            &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
-            &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
-            &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
-            &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
-            &quot;supportContactInfo&quot;: &quot;show&quot;,
-            &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
-            &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
-            &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
-            &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
-            &quot;smForums&quot;: &quot;hide&quot;
+        {
+            &quot;id&quot;: &quot;N_5678&quot;,
+            &quot;organizationId&quot;: 2930418,
+            &quot;name&quot;: &quot;Long Island Office - wireless&quot;,
+            &quot;timeZone&quot;: &quot;America/Los_Angeles&quot;,
+            &quot;tags&quot;: &quot; tag1 tag2 &quot;,
+            &quot;type&quot;: &quot;wireless&quot;,
+            &quot;disableMyMerakiCom&quot;: false
         }
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Cameras</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Generate a snapshot of what the camera sees at the specified time and return a link to that image.</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/cameras/{serial}/snapshot</code><p class="ml-5"><blockquote><p>Param <code>snapshotNetworkCamera</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional param <code>generateNetworkCameraSnapshot</code> added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Devices</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Blink the LEDs on a device</strong></p><h4 class="mr-4 badge post">POST  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/blinkLeds</code><p class="ml-5"><blockquote><p>Param <code>blinkLedsNetworkDevice</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional param <code>blinkNetworkDeviceLeds</code> added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Group policies</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update a group policy</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/groupPolicies/{groupPolicyId}</code><p class="ml-5"><blockquote><p>Optional property <code>firewallAndTrafficShaping</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>SM</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Lock a set of devices</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/devices/lock</code><p class="ml-5"><blockquote><p>Param <code>updateNetworkSmDevicesLock</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional param <code>lockNetworkSmDevices</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Wipe a device</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/device/wipe</code><p class="ml-5"><blockquote><p>Param <code>updateNetworkSmDeviceWipe</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional param <code>wipeNetworkSmDevice</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Force check-in a set of devices</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/devices/checkin</code><p class="ml-5"><blockquote><p>Param <code>updateNetworkSmDevicesCheckin</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional param <code>checkinNetworkSmDevices</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Move a set of devices to a new network</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{network_id}/sm/devices/move</code><p class="ml-5"><blockquote><p>Param <code>updateNetworkSmDevicesMove</code> Deleted</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional param <code>moveNetworkSmDevices</code> added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Config templates</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update a configuration template</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/configTemplates/{id}</code><p class="ml-5"><blockquote><p>Method added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>SSIDs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/ssids/{number}/reset</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge post">POST</div> 
+      <i>resetNetworkSsid</i>
+      <br>
+      <b>Reset configuration and stats for an SSID</b>
+      
+      <pre><code>{
+    &quot;number&quot;: 0,
+    &quot;name&quot;: &quot;My SSID&quot;,
+    &quot;enabled&quot;: true,
+    &quot;splashPage&quot;: &quot;Click-through splash page&quot;,
+    &quot;ssidAdminAccessible&quot;: false,
+    &quot;authMode&quot;: &quot;open&quot;,
+    &quot;ipAssignmentMode&quot;: &quot;NAT mode&quot;,
+    &quot;bandSelection&quot;: &quot;5 GHz band only&quot;,
+    &quot;perClientBandwidthLimitUp&quot;: 0,
+    &quot;perClientBandwidthLimitDown&quot;: 0
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Update the attributes of an SSID</strong></p><h4 class="mr-4 badge put">PUT  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/ssids/{number}</code><p class="ml-5"><blockquote><p>Optional property <code>radiusAttributeForGroupPolicies</code> Added</p></blockquote></p><!-- Only display method and path for first iteration--><p class="ml-5"><blockquote><p>Optional property <code>radiusOverride</code> Added</p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Wireless health</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated connectivity info for this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/connectionStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated connectivity info for this network, grouped by node</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/connectionStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated connectivity info for a given AP on this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/connectionStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated connectivity info for this network, grouped by clients</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/clients/connectionStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated connectivity info for a given client on this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/clients/{clientId}/connectionStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated latency info for this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/latencyStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated latency info for this network, grouped by node</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/latencyStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated latency info for a given AP on this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/latencyStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated latency info for this network, grouped by clients</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/clients/latencyStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>Aggregated latency info for a given client on this network</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/clients/{clientId}/latencyStats</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong>List of all failed client connection events on this network in a given time range</strong></p><h4 class="mr-4 badge get">GET  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/failedConnections</code><p class="ml-5"><blockquote><p>Optional param <code>timespan</code> added</p></blockquote></p><hr><h3>Action batches</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/actionBatches</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationActionBatches</i>
+      <br>
+      <b>Return the list of action batches in the organization</b>
+      
+      <pre><code>[
+    {
+        &quot;id&quot;: &quot;123&quot;,
+        &quot;status&quot;: &quot;in progress&quot;,
+        &quot;confirmed&quot;: true,
+        &quot;synchronous&quot;: false,
+        &quot;actions&quot;: [
+            {
+                &quot;resource&quot;: &quot;/devices/QXXX-XXXX-XXXX/switchPorts/3&quot;,
+                &quot;operation&quot;: &quot;update&quot;,
+                &quot;body&quot;: {
+                    &quot;enabled&quot;: false
+                }
+            }
+        ]
     }
 ]</code></pre>
       
       <br>
       <div class="mr-4 badge post">POST</div> 
-      <i>createOrganizationBrandingPolicy</i>
+      <i>createOrganizationActionBatch</i>
       <br>
-      <b>Add a new branding policy to an organization</b>
+      <b>Create an action batch</b>
       
       <pre><code>{
-    &quot;brandingPolicyId&quot;: &quot;456&quot;,
-    &quot;name&quot;: &quot;My Branding Policy&quot;,
-    &quot;enabled&quot;: true,
-    &quot;adminSettings&quot;: {
-        &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
-        &quot;values&quot;: [
-            &quot;N_1234&quot;,
-            &quot;L_5678&quot;
-        ]
-    },
-    &quot;helpSettings&quot;: {
-        &quot;helpTab&quot;: &quot;show&quot;,
-        &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;communitySubtab&quot;: &quot;show&quot;,
-        &quot;casesSubtab&quot;: &quot;hide&quot;,
-        &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
-        &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
-        &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
-        &quot;supportContactInfo&quot;: &quot;show&quot;,
-        &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
-        &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
-        &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
-        &quot;smForums&quot;: &quot;hide&quot;
-    }
+    &quot;id&quot;: &quot;123&quot;,
+    &quot;status&quot;: &quot;in progress&quot;,
+    &quot;confirmed&quot;: true,
+    &quot;synchronous&quot;: false,
+    &quot;actions&quot;: [
+        {
+            &quot;resource&quot;: &quot;/devices/QXXX-XXXX-XXXX/switchPorts/3&quot;,
+            &quot;operation&quot;: &quot;update&quot;,
+            &quot;body&quot;: {
+                &quot;enabled&quot;: false
+            }
+        }
+    ]
 }</code></pre>
-      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/brandingPolicies/priorities</code><p class="ml-5"><blockquote><p>Path added
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/actionBatches/{id}</code><p class="ml-5"><blockquote><p>Path added
       <br>
       <div class="mr-4 badge get">GET</div> 
-      <i>getOrganizationBrandingPoliciesPriorities</i>
+      <i>getOrganizationActionBatch</i>
       <br>
-      <b>Return the branding policy IDs of an organization in priority order. IDs are ordered in ascending order of priority (IDs later in the array have higher priority).</b>
+      <b>Return an action batch</b>
       
       <pre><code>{
-    &quot;brandingPolicyIds&quot;: [
-        &quot;123&quot;,
-        &quot;456&quot;,
-        &quot;789&quot;
+    &quot;id&quot;: &quot;123&quot;,
+    &quot;status&quot;: &quot;in progress&quot;,
+    &quot;confirmed&quot;: true,
+    &quot;synchronous&quot;: false,
+    &quot;actions&quot;: [
+        {
+            &quot;resource&quot;: &quot;/devices/QXXX-XXXX-XXXX/switchPorts/3&quot;,
+            &quot;operation&quot;: &quot;update&quot;,
+            &quot;body&quot;: {
+                &quot;enabled&quot;: false
+            }
+        }
     ]
 }</code></pre>
       
       <br>
       <div class="mr-4 badge put">PUT</div> 
-      <i>updateOrganizationBrandingPoliciesPriorities</i>
+      <i>updateOrganizationActionBatch</i>
       <br>
-      <b>Update the priority ordering of an organization's branding policies.</b>
+      <b>Update an action batch</b>
       
       <pre><code>{
-    &quot;brandingPolicyIds&quot;: [
-        &quot;123&quot;,
-        &quot;456&quot;,
-        &quot;789&quot;
+    &quot;id&quot;: &quot;123&quot;,
+    &quot;status&quot;: &quot;in progress&quot;,
+    &quot;confirmed&quot;: true,
+    &quot;synchronous&quot;: false,
+    &quot;actions&quot;: [
+        {
+            &quot;resource&quot;: &quot;/devices/QXXX-XXXX-XXXX/switchPorts/3&quot;,
+            &quot;operation&quot;: &quot;update&quot;,
+            &quot;body&quot;: {
+                &quot;enabled&quot;: false
+            }
+        }
     ]
-}</code></pre>
-      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}</code><p class="ml-5"><blockquote><p>Path added
-      <br>
-      <div class="mr-4 badge get">GET</div> 
-      <i>getOrganizationBrandingPolicy</i>
-      <br>
-      <b>Return a branding policy</b>
-      
-      <pre><code>{
-    &quot;brandingPolicyId&quot;: &quot;456&quot;,
-    &quot;name&quot;: &quot;My Branding Policy&quot;,
-    &quot;enabled&quot;: true,
-    &quot;adminSettings&quot;: {
-        &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
-        &quot;values&quot;: [
-            &quot;N_1234&quot;,
-            &quot;L_5678&quot;
-        ]
-    },
-    &quot;helpSettings&quot;: {
-        &quot;helpTab&quot;: &quot;show&quot;,
-        &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;communitySubtab&quot;: &quot;show&quot;,
-        &quot;casesSubtab&quot;: &quot;hide&quot;,
-        &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
-        &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
-        &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
-        &quot;supportContactInfo&quot;: &quot;show&quot;,
-        &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
-        &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
-        &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
-        &quot;smForums&quot;: &quot;hide&quot;
-    }
-}</code></pre>
-      
-      <br>
-      <div class="mr-4 badge put">PUT</div> 
-      <i>updateOrganizationBrandingPolicy</i>
-      <br>
-      <b>Update a branding policy</b>
-      
-      <pre><code>{
-    &quot;brandingPolicyId&quot;: &quot;456&quot;,
-    &quot;name&quot;: &quot;My Branding Policy&quot;,
-    &quot;enabled&quot;: true,
-    &quot;adminSettings&quot;: {
-        &quot;appliesTo&quot;: &quot;All admins of networks...&quot;,
-        &quot;values&quot;: [
-            &quot;N_1234&quot;,
-            &quot;L_5678&quot;
-        ]
-    },
-    &quot;helpSettings&quot;: {
-        &quot;helpTab&quot;: &quot;show&quot;,
-        &quot;getHelpSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;communitySubtab&quot;: &quot;show&quot;,
-        &quot;casesSubtab&quot;: &quot;hide&quot;,
-        &quot;dataProtectionRequestsSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;getHelpSubtabKnowledgeBaseSearch&quot;: &quot;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&quot;,
-        &quot;universalSearchKnowledgeBaseSearch&quot;: &quot;hide&quot;,
-        &quot;ciscoMerakiProductDocumentation&quot;: &quot;show&quot;,
-        &quot;supportContactInfo&quot;: &quot;show&quot;,
-        &quot;newFeaturesSubtab&quot;: &quot;show&quot;,
-        &quot;firewallInfoSubtab&quot;: &quot;hide&quot;,
-        &quot;apiDocsSubtab&quot;: &quot;default or inherit&quot;,
-        &quot;hardwareReplacementsSubtab&quot;: &quot;hide&quot;,
-        &quot;smForums&quot;: &quot;hide&quot;
-    }
 }</code></pre>
       
       <br>
       <div class="mr-4 badge delete">DELETE</div> 
-      <i>deleteOrganizationBrandingPolicy</i>
+      <i>deleteOrganizationActionBatch</i>
       <br>
-      <b>Delete a branding policy</b>
+      <b>Delete an action batch</b>
       
       <pre><code></code></pre>
-      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --></p></body><style>.post {
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Clients</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/clients</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkClients</i>
+      <br>
+      <b>List the clients that have used this network in the timespan</b>
+      
+      <pre><code>{
+    &quot;usage&quot;: {
+        &quot;sent&quot;: 138,
+        &quot;recv&quot;: 61
+    },
+    &quot;id&quot;: &quot;k74272e&quot;,
+    &quot;description&quot;: &quot;Miles's phone&quot;,
+    &quot;mac&quot;: &quot;00:11:22:33:44:55&quot;,
+    &quot;ip&quot;: &quot;1.2.3.4&quot;,
+    &quot;user&quot;: &quot;milesmeraki&quot;,
+    &quot;vlan&quot;: 255,
+    &quot;switchport&quot;: null,
+    &quot;ip6&quot;: &quot;&quot;,
+    &quot;firstSeen&quot;: 1518365681,
+    &quot;lastSeen&quot;: 1526087474,
+    &quot;manufacturer&quot;: &quot;Apple&quot;,
+    &quot;os&quot;: &quot;iOS&quot;
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>OpenAPI Spec</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/openapiSpec</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationOpenapiSpec</i>
+      <br>
+      <b>Return the OpenAPI Specification of the organization's API documentation in JSON</b>
+      
+      <pre><code>{
+    &quot;swagger&quot;: &quot;2.0&quot;,
+    &quot;info&quot;: {
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;title&quot;: &quot;Meraki Dashboard API&quot;,
+        &quot;description&quot;: &quot;The Cisco Meraki Dashboard API is a modern REST API based on the [OpenAPI](https://swagger.io/docs/specification/about/) specification.\n\n## What can the API be used for?\nThe Dashboard API can be used for many purposes. It’s meant to be an open-ended tool. Here are some examples of use cases:\n\n* Add new organizations, admins, networks, devices, VLANs, and more\n* Configure networks at scale\n* Automatically on-board and off-board new employees’ teleworker setups\n* Build your own dashboard for store managers, field techs, or unique use cases\n\n## Enabling the Dashboard API\n1. Begin by logging into [Meraki Dashboard](https://dashboard.meraki.com) and navigating to **Organization &gt; Settings**\n\n2. Locate the section titled **Dashboard API access** and select **Enable Access**, then **Save** your changes\n\n3. After enabling the API, choose your username at the top-right of the Meraki Dashboard and select **my profile**\n\n4. Locate the section titled **Dashboard API access** and select **Generate new API key**\n\n*Note: The API key is associated with a Dashboard administrator account. You can generate, revoke, and regenerate your API key on your profile.*\n\n**Keep your API key safe as it provides authentication to all of your organizations with the API enabled. If your API key is shared, you can regenerate your API key at any time. This will revoke the existing API key.**\n\nCopy and store your API key in a safe place. Dashboard does not store API keys in plaintext for security reasons, so this is the only time you will be able to record it. If you lose or forget your API key, you will have to revoke it and generate a new one.\n\nEvery request must specify an API key via a request header.\n\nThe API key must be specified in the URL header. The API will return a 404 (rather than a 403) in response to a request with a missing or incorrect API key in order to prevent leaking the existence of resources to unauthorized users.\n\n`X-Cisco-Meraki-API-Key: &lt;secret key&gt;`\n\nRead more about API [authorization](../api/#/python/getting-started/authorizing-your-client)\n\n\n## Versioning\nOnce an API version is released, we will make only backwards-compatible changes to it. Backwards-compatible changes include:\n\n* Adding new API resources\n\n* Adding new optional request parameters to existing API methods\n\n* Adding new properties to existing API responses\n\n* Changing the order of properties in existing API responses\n\n## Rate Limit\n* The Dashboard API is limited to **5 calls per second**, per organization.\n* A burst of 5 additional calls are allowed in the first second, so a maximum of 15 calls in the first 2 seconds.\n* The rate limiting technique is based off of the [token bucket model](https://en.wikipedia.org/wiki/Token_bucket).\n* An error with a `429` status code will be returned when the rate limit has been exceeded.\n* Expect to backoff for 1 - 2 seconds if the limit has been exceeded. You may have to wait potentially longer if a large number of requests were made within this timeframe.\n\n\n## Additional Details\nIdentifiers in the API are opaque strings. A `{networkId}`, for example, might be the string “126043”, whereas an `{orderId}` might contain characters, such as “4S1234567”. Client applications must not try to parse them as numbers. Even identifiers that look like numbers might be too long to encode without loss of precision in Javascript, where the only numeric type is IEEE 754 floating point.\n\nVerbs in the API follow the usual REST conventions:\n\n`GET` returns the value of a resource or a list of resources, depending on whether an identifier is specified. For example, a `GET` of `/v0/organizations` returns a list of organizations, whereas a `GET` of `/v0/organizations/{organizationId}` returns a particular organization.\n\n`POST` adds a new resource, as in a `POST` to `/v0/organizations/{organizationId}/admins`, or performs some other non-idempotent change.\n\n`PUT` updates a resource. `PUTs` are idempotent; they update a resource, creating it first if it does not already exist. A `PUT` should specify all the fields of a resource; the API will revert omitted fields to their default value.\n\n`DELETE` removes a resource.\n&quot;,
+        &quot;x-codegen-settings&quot;: {
+            &quot;appendContentHeaders&quot;: true,
+            &quot;brandLabel&quot;: &quot;meraki&quot;,
+            &quot;collectParameters&quot;: true,
+            &quot;doNotSplitWords&quot;: [
+                &quot;SSIDs&quot;,
+                &quot;VLANs&quot;
+            ],
+            &quot;generateAsyncCode&quot;: true,
+            &quot;projectName&quot;: &quot;meraki&quot;,
+            &quot;sortResources&quot;: true,
+            &quot;useEnumPostfix&quot;: true,
+            &quot;useMethodPrefix&quot;: false,
+            &quot;useModelPostfix&quot;: true,
+            &quot;validateRequiredParameters&quot;: true
+        }
+    },
+    &quot;host&quot;: &quot;api.meraki.com&quot;,
+    &quot;basePath&quot;: &quot;/api/v0&quot;,
+    &quot;schemes&quot;: [
+        &quot;https&quot;
+    ],
+    &quot;consumes&quot;: [
+        &quot;application/json&quot;
+    ],
+    &quot;produces&quot;: [
+        &quot;application/json&quot;
+    ],
+    &quot;securityDefinitions&quot;: {
+        &quot;meraki_api_key&quot;: {
+            &quot;type&quot;: &quot;apiKey&quot;,
+            &quot;name&quot;: &quot;X-Cisco-Meraki-API-Key&quot;,
+            &quot;in&quot;: &quot;header&quot;
+        }
+    },
+    &quot;security&quot;: [
+        {
+            &quot;meraki_api_key&quot;: []
+        }
+    ],
+    &quot;paths&quot;: {
+        &quot;/pets&quot;: {
+            &quot;get&quot;: {
+                &quot;description&quot;: &quot;Returns all pets from the system&quot;,
+                &quot;operationId&quot;: &quot;getPets&quot;,
+                &quot;responses&quot;: {
+                    &quot;200&quot;: {
+                        &quot;description&quot;: &quot;Successful operation&quot;,
+                        &quot;examples&quot;: {
+                            &quot;application/json&quot;: [
+                                {
+                                    &quot;id&quot;: 1,
+                                    &quot;name&quot;: &quot;Riley&quot;,
+                                    &quot;type&quot;: &quot;Cat&quot;
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Organization alert settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/alertSettings</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationAlertSettings</i>
+      <br>
+      <b>Return the alert configuration for this organization</b>
+      
+      <pre><code>{
+    &quot;defaultDestinations&quot;: {
+        &quot;emails&quot;: [
+            &quot;miles@meraki.com&quot;
+        ],
+        &quot;allAdmins&quot;: true
+    },
+    &quot;alerts&quot;: [
+        {
+            &quot;type&quot;: &quot;insightAppOutage&quot;,
+            &quot;enabled&quot;: true,
+            &quot;alertDestinations&quot;: {
+                &quot;emails&quot;: [
+                    &quot;miles@meraki.com&quot;
+                ],
+                &quot;allAdmins&quot;: false
+            },
+            &quot;filters&quot;: {
+                &quot;alertOnAllApps&quot;: true
+            }
+        }
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateOrganizationAlertSettings</i>
+      <br>
+      <b>Update the alert configuration for this organization</b>
+      
+      <pre><code>{
+    &quot;defaultDestinations&quot;: {
+        &quot;emails&quot;: [
+            &quot;miles@meraki.com&quot;
+        ],
+        &quot;allAdmins&quot;: true
+    },
+    &quot;alerts&quot;: [
+        {
+            &quot;type&quot;: &quot;insightAppOutage&quot;,
+            &quot;enabled&quot;: true,
+            &quot;alertDestinations&quot;: {
+                &quot;emails&quot;: [
+                    &quot;miles@meraki.com&quot;
+                ],
+                &quot;allAdmins&quot;: false
+            },
+            &quot;filters&quot;: {
+                &quot;alertOnAllApps&quot;: true
+            }
+        }
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Radio settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/wireless/radioSettings</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkDeviceWirelessRadioSettings</i>
+      <br>
+      <b>Return the radio settings of a device</b>
+      
+      <pre><code>{
+    &quot;serial&quot;: &quot;Q234-ABCD-5678&quot;,
+    &quot;rfProfileId&quot;: &quot;1234&quot;
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkDeviceWirelessRadioSettings</i>
+      <br>
+      <b>Update the radio settings of a device</b>
+      
+      <pre><code>{
+    &quot;serial&quot;: &quot;Q234-ABCD-5678&quot;,
+    &quot;rfProfileId&quot;: &quot;1234&quot;
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/wireless/rfProfiles</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkWirelessRfProfiles</i>
+      <br>
+      <b>List the non-basic RF profiles for this network</b>
+      
+      <pre><code>[
+    {
+        &quot;id&quot;: &quot;1234&quot;,
+        &quot;networkId&quot;: &quot;N_24329156&quot;,
+        &quot;name&quot;: &quot;Some Custom RF Profile&quot;
+    }
+]</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Intrusion settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/security/intrusionSettings</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSecurityIntrusionSettings</i>
+      <br>
+      <b>Returns all supported intrusion settings for an MX network</b>
+      
+      <pre><code>{
+    &quot;mode&quot;: &quot;prevention&quot;,
+    &quot;idsRulesets&quot;: &quot;balanced&quot;,
+    &quot;protectedNetworks&quot;: {
+        &quot;useDefault&quot;: false,
+        &quot;includedCidr&quot;: [
+            &quot;10.0.0.0/8&quot;,
+            &quot;127.0.0.0/8&quot;,
+            &quot;169.254.0.0/16&quot;,
+            &quot;172.16.0.0/12&quot;
+        ],
+        &quot;excludedCidr&quot;: [
+            &quot;10.0.0.0/8&quot;,
+            &quot;127.0.0.0/8&quot;
+        ]
+    }
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkSecurityIntrusionSettings</i>
+      <br>
+      <b>Set the supported instrusion settings for an MX network</b>
+      
+      <pre><code>{
+    &quot;mode&quot;: &quot;prevention&quot;,
+    &quot;idsRulesets&quot;: &quot;balanced&quot;,
+    &quot;protectedNetworks&quot;: {
+        &quot;useDefault&quot;: false,
+        &quot;includedCidr&quot;: [
+            &quot;10.0.0.0/8&quot;,
+            &quot;127.0.0.0/8&quot;,
+            &quot;169.254.0.0/16&quot;,
+            &quot;172.16.0.0/12&quot;
+        ],
+        &quot;excludedCidr&quot;: [
+            &quot;10.0.0.0/8&quot;,
+            &quot;127.0.0.0/8&quot;
+        ]
+    }
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/security/intrusionSettings</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationSecurityIntrusionSettings</i>
+      <br>
+      <b>Returns all supported intrusion settings for an organization.</b>
+      
+      <pre><code>{
+    &quot;whitelistedRules&quot;: [
+        {
+            &quot;ruleId&quot;: &quot;meraki:intrusion/snort/GID/01/SID/688&quot;,
+            &quot;message&quot;: &quot;SQL sa login failed&quot;
+        },
+        {
+            &quot;ruleId&quot;: &quot;meraki:intrusion/snort/GID/01/SID/5805&quot;,
+            &quot;message&quot;: &quot;MALWARE-OTHER Trackware myway speedbar runtime detection - switch engines&quot;
+        }
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateOrganizationSecurityIntrusionSettings</i>
+      <br>
+      <b>Sets supported intrusion settings for an organization.</b>
+      
+      <pre><code>{
+    &quot;whitelistedRules&quot;: [
+        {
+            &quot;ruleId&quot;: &quot;meraki:intrusion/snort/GID/01/SID/688&quot;,
+            &quot;message&quot;: &quot;SQL sa login failed&quot;
+        },
+        {
+            &quot;ruleId&quot;: &quot;meraki:intrusion/snort/GID/01/SID/5805&quot;,
+            &quot;message&quot;: &quot;MALWARE-OTHER Trackware myway speedbar runtime detection - switch engines&quot;
+        }
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Security events</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/securityEvents</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSecurityEvents</i>
+      <br>
+      <b>List the security events for a network</b>
+      
+      <pre><code>[
+    {
+        &quot;ts&quot;: 1547683314.270398,
+        &quot;deviceMac&quot;: &quot;00:18:0a:01:02:03&quot;,
+        &quot;clientMac&quot;: &quot;A1:B2:C3:D4:E5:F6&quot;,
+        &quot;srcIp&quot;: &quot;1.2.3.4:34195&quot;,
+        &quot;destIp&quot;: &quot;10.20.30.40:80&quot;,
+        &quot;protocol&quot;: &quot;tcp/ip&quot;,
+        &quot;priority&quot;: &quot;2&quot;,
+        &quot;classification&quot;: &quot;4&quot;,
+        &quot;blocked&quot;: true,
+        &quot;message&quot;: &quot;SERVER-WEBAPP JBoss JMX console access attempt&quot;,
+        &quot;signature&quot;: &quot;1:21516:9&quot;,
+        &quot;sigSource&quot;: &quot;&quot;
+    },
+    {
+        &quot;ts&quot;: 1547683827.723265,
+        &quot;deviceMac&quot;: &quot;00:18:0a:01:02:03&quot;,
+        &quot;clientMac&quot;: &quot;A1:B2:C3:D4:E5:F6&quot;,
+        &quot;srcIp&quot;: &quot;1.2.3.4:56023&quot;,
+        &quot;destIp&quot;: &quot;10.20.30.40:80&quot;,
+        &quot;protocol&quot;: &quot;tcp/ip&quot;,
+        &quot;priority&quot;: &quot;1&quot;,
+        &quot;classification&quot;: &quot;33&quot;,
+        &quot;blocked&quot;: true,
+        &quot;message&quot;: &quot;POLICY-OTHER Adobe ColdFusion admin interface access attempt&quot;,
+        &quot;signature&quot;: &quot;1:25975:2&quot;,
+        &quot;sigSource&quot;: &quot;&quot;
+    }
+]</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/securityEvents</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationSecurityEvents</i>
+      <br>
+      <b>List the security events for an organization</b>
+      
+      <pre><code>[
+    {
+        &quot;ts&quot;: 1547683314.270398,
+        &quot;deviceMac&quot;: &quot;00:18:0a:01:02:03&quot;,
+        &quot;clientMac&quot;: &quot;A1:B2:C3:D4:E5:F6&quot;,
+        &quot;srcIp&quot;: &quot;1.2.3.4:34195&quot;,
+        &quot;destIp&quot;: &quot;10.20.30.40:80&quot;,
+        &quot;protocol&quot;: &quot;tcp/ip&quot;,
+        &quot;priority&quot;: &quot;2&quot;,
+        &quot;classification&quot;: &quot;4&quot;,
+        &quot;blocked&quot;: true,
+        &quot;message&quot;: &quot;SERVER-WEBAPP JBoss JMX console access attempt&quot;,
+        &quot;signature&quot;: &quot;1:21516:9&quot;,
+        &quot;sigSource&quot;: &quot;&quot;
+    },
+    {
+        &quot;ts&quot;: 1547683827.723265,
+        &quot;deviceMac&quot;: &quot;00:18:0a:01:02:03&quot;,
+        &quot;clientMac&quot;: &quot;A1:B2:C3:D4:E5:F6&quot;,
+        &quot;srcIp&quot;: &quot;1.2.3.4:56023&quot;,
+        &quot;destIp&quot;: &quot;10.20.30.40:80&quot;,
+        &quot;protocol&quot;: &quot;tcp/ip&quot;,
+        &quot;priority&quot;: &quot;1&quot;,
+        &quot;classification&quot;: &quot;33&quot;,
+        &quot;blocked&quot;: true,
+        &quot;message&quot;: &quot;POLICY-OTHER Adobe ColdFusion admin interface access attempt&quot;,
+        &quot;signature&quot;: &quot;1:25975:2&quot;,
+        &quot;sigSource&quot;: &quot;&quot;
+    }
+]</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Geofence regions</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/geofences/{geofenceId}/regions</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSmGeofenceRegions</i>
+      <br>
+      <b>List the geofence's regions associated with the specified geofence</b>
+      
+      <pre><code>[
+    {
+        &quot;description&quot;: &quot;This is a sample geofence region&quot;,
+        &quot;type&quot;: &quot;circle&quot;,
+        &quot;lat&quot;: 10,
+        &quot;lon&quot;: 10,
+        &quot;radius&quot;: 10
+    }
+]</code></pre>
+      
+      <br>
+      <div class="mr-4 badge post">POST</div> 
+      <i>createNetworkSmGeofenceRegion</i>
+      <br>
+      <b>Add a new geofence region to the specified geofence</b>
+      
+      <pre><code>{
+    &quot;description&quot;: &quot;This is a sample geofence region&quot;,
+    &quot;type&quot;: &quot;circle&quot;,
+    &quot;lat&quot;: 10,
+    &quot;lon&quot;: 10,
+    &quot;radius&quot;: 10
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/geofences/{geofenceId}/regions/{regionId}</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSmGeofenceRegion</i>
+      <br>
+      <b>Show the specified geofence region</b>
+      
+      <pre><code>{
+    &quot;description&quot;: &quot;This is a sample geofence region&quot;,
+    &quot;type&quot;: &quot;circle&quot;,
+    &quot;lat&quot;: 10,
+    &quot;lon&quot;: 10,
+    &quot;radius&quot;: 10
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkSmGeofenceRegion</i>
+      <br>
+      <b>Update a specified geofence region</b>
+      
+      <pre><code>{
+    &quot;description&quot;: &quot;This is a sample geofence region&quot;,
+    &quot;type&quot;: &quot;circle&quot;,
+    &quot;lat&quot;: 10,
+    &quot;lon&quot;: 10,
+    &quot;radius&quot;: 10
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge delete">DELETE</div> 
+      <i>deleteNetworkSmGeofenceRegion</i>
+      <br>
+      <b>Delete a geofence region attached to the specified geofence</b>
+      
+      <pre><code></code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Geofences</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/geofences</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSmGeofences</i>
+      <br>
+      <b>List the geofences in this network</b>
+      
+      <pre><code>[
+    {
+        &quot;name&quot;: &quot;My Geofence&quot;,
+        &quot;description&quot;: &quot;This is a sample geofence&quot;,
+        &quot;maxTimeOutside&quot;: 5
+    }
+]</code></pre>
+      
+      <br>
+      <div class="mr-4 badge post">POST</div> 
+      <i>createNetworkSmGeofence</i>
+      <br>
+      <b>Add a new geofence</b>
+      
+      <pre><code>{
+    &quot;name&quot;: &quot;My Geofence&quot;,
+    &quot;description&quot;: &quot;This is a sample geofence&quot;,
+    &quot;maxTimeOutside&quot;: 5
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/geofences/{geofenceId}</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSmGeofence</i>
+      <br>
+      <b>Returns a specific geofence</b>
+      
+      <pre><code>{
+    &quot;name&quot;: &quot;My Geofence&quot;,
+    &quot;description&quot;: &quot;This is a sample geofence&quot;,
+    &quot;maxTimeOutside&quot;: 5
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkSmGeofence</i>
+      <br>
+      <b>Update a geofence</b>
+      
+      <pre><code>{
+    &quot;name&quot;: &quot;My Geofence&quot;,
+    &quot;description&quot;: &quot;This is a sample geofence&quot;,
+    &quot;maxTimeOutside&quot;: 5
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/geofences/{geofence_id}</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge delete">DELETE</div> 
+      <i>deleteNetworkSmGeofence</i>
+      <br>
+      <b>Delete a geofence</b>
+      
+      <pre><code></code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Tags</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/tags</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSmTags</i>
+      <br>
+      <b>List the tags on this node group</b>
+      
+      <pre><code>[
+    {
+        &quot;name&quot;: &quot;Geofence Tag&quot;,
+        &quot;type&quot;: &quot;geofence&quot;,
+        &quot;scope&quot;: &quot;withAll&quot;,
+        &quot;tags&quot;: [
+            &quot;tag&quot;,
+            &quot;test&quot;
+        ]
+    }
+]</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/tags/{tagId}</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSmTag</i>
+      <br>
+      <b>Show a specific tag</b>
+      
+      <pre><code>{
+    &quot;name&quot;: &quot;Geofence Tag&quot;,
+    &quot;type&quot;: &quot;geofence&quot;,
+    &quot;scope&quot;: &quot;withAll&quot;,
+    &quot;tags&quot;: [
+        &quot;tag&quot;,
+        &quot;test&quot;
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge post">POST</div> 
+      <i>createNetworkSmTag</i>
+      <br>
+      <b>Add a new tag</b>
+      
+      <pre><code>{
+    &quot;name&quot;: &quot;Geofence Tag&quot;,
+    &quot;type&quot;: &quot;geofence&quot;,
+    &quot;scope&quot;: &quot;withAll&quot;,
+    &quot;tags&quot;: [
+        &quot;tag&quot;,
+        &quot;test&quot;
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkSmTag</i>
+      <br>
+      <b>Update a tag</b>
+      
+      <pre><code>{
+    &quot;name&quot;: &quot;Geofence Tag&quot;,
+    &quot;type&quot;: &quot;geofence&quot;,
+    &quot;scope&quot;: &quot;withAll&quot;,
+    &quot;tags&quot;: [
+        &quot;tag&quot;,
+        &quot;test&quot;
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge delete">DELETE</div> 
+      <i>deleteNetworkSmTag</i>
+      <br>
+      <b>Delete a tag</b>
+      
+      <pre><code></code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/sm/tags/{tagId}/scopedDevices</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSmTagScopedDevices</i>
+      <br>
+      <b>Get the devices in scope of this tag</b>
+      
+      <pre><code>{
+    &quot;name&quot;: &quot;Geofence Tag&quot;,
+    &quot;type&quot;: &quot;geofence&quot;,
+    &quot;scope&quot;: &quot;withAll&quot;,
+    &quot;tags&quot;: [
+        &quot;tag&quot;,
+        &quot;test&quot;
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Traffic shaping</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/trafficShaping</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkTrafficShaping</i>
+      <br>
+      <b>Display the traffic shaping settings for an MX network</b>
+      
+      <pre><code>{
+    &quot;defaultRulesEnabled&quot;: true,
+    &quot;rules&quot;: [
+        {
+            &quot;definitions&quot;: [
+                {
+                    &quot;type&quot;: &quot;host&quot;,
+                    &quot;value&quot;: &quot;google.com&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;port&quot;,
+                    &quot;value&quot;: &quot;9090&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;10.1.0.0/16:80&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;localNet&quot;,
+                    &quot;value&quot;: &quot;192.168.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;applicationCategory&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/category/2&quot;,
+                        &quot;name&quot;: &quot;Blogging&quot;
+                    }
+                },
+                {
+                    &quot;type&quot;: &quot;application&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/application/133&quot;,
+                        &quot;name&quot;: &quot;Battle.net&quot;
+                    }
+                }
+            ],
+            &quot;perClientBandwidthLimits&quot;: {
+                &quot;settings&quot;: &quot;custom&quot;,
+                &quot;bandwidthLimits&quot;: {
+                    &quot;limitUp&quot;: 1000000,
+                    &quot;limitDown&quot;: 1000000
+                }
+            },
+            &quot;dscpTagValue&quot;: null,
+            &quot;priority&quot;: &quot;normal&quot;
+        }
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkTrafficShaping</i>
+      <br>
+      <b>Update the traffic shaping settings for an MX network</b>
+      
+      <pre><code>{
+    &quot;defaultRulesEnabled&quot;: true,
+    &quot;rules&quot;: [
+        {
+            &quot;definitions&quot;: [
+                {
+                    &quot;type&quot;: &quot;host&quot;,
+                    &quot;value&quot;: &quot;google.com&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;port&quot;,
+                    &quot;value&quot;: &quot;9090&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;10.1.0.0/16:80&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;localNet&quot;,
+                    &quot;value&quot;: &quot;192.168.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;applicationCategory&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/category/2&quot;,
+                        &quot;name&quot;: &quot;Blogging&quot;
+                    }
+                },
+                {
+                    &quot;type&quot;: &quot;application&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/application/133&quot;,
+                        &quot;name&quot;: &quot;Battle.net&quot;
+                    }
+                }
+            ],
+            &quot;perClientBandwidthLimits&quot;: {
+                &quot;settings&quot;: &quot;custom&quot;,
+                &quot;bandwidthLimits&quot;: {
+                    &quot;limitUp&quot;: 1000000,
+                    &quot;limitDown&quot;: 1000000
+                }
+            },
+            &quot;dscpTagValue&quot;: null,
+            &quot;priority&quot;: &quot;normal&quot;
+        }
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/ssids/{number}/trafficShaping</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkSsidTrafficShaping</i>
+      <br>
+      <b>Display the traffic shaping settings for a SSID on an MR network</b>
+      
+      <pre><code>{
+    &quot;trafficShapingEnabled&quot;: true,
+    &quot;defaultRulesEnabled&quot;: true,
+    &quot;rules&quot;: [
+        {
+            &quot;definitions&quot;: [
+                {
+                    &quot;type&quot;: &quot;host&quot;,
+                    &quot;value&quot;: &quot;google.com&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;port&quot;,
+                    &quot;value&quot;: &quot;9090&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;10.1.0.0/16:80&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;localNet&quot;,
+                    &quot;value&quot;: &quot;192.168.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;applicationCategory&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/category/2&quot;,
+                        &quot;name&quot;: &quot;Blogging&quot;
+                    }
+                },
+                {
+                    &quot;type&quot;: &quot;application&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/application/133&quot;,
+                        &quot;name&quot;: &quot;Battle.net&quot;
+                    }
+                }
+            ],
+            &quot;perClientBandwidthLimits&quot;: {
+                &quot;settings&quot;: &quot;custom&quot;,
+                &quot;bandwidthLimits&quot;: {
+                    &quot;limitUp&quot;: 1000000,
+                    &quot;limitDown&quot;: 1000000
+                }
+            },
+            &quot;dscpTagValue&quot;: null,
+            &quot;pcpTagValue&quot;: null
+        }
+    ]
+}</code></pre>
+      
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkSsidTrafficShaping</i>
+      <br>
+      <b>Update the traffic shaping settings for an SSID on an MR network</b>
+      
+      <pre><code>{
+    &quot;trafficShapingEnabled&quot;: true,
+    &quot;defaultRulesEnabled&quot;: true,
+    &quot;rules&quot;: [
+        {
+            &quot;definitions&quot;: [
+                {
+                    &quot;type&quot;: &quot;host&quot;,
+                    &quot;value&quot;: &quot;google.com&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;port&quot;,
+                    &quot;value&quot;: &quot;9090&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;192.1.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;ipRange&quot;,
+                    &quot;value&quot;: &quot;10.1.0.0/16:80&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;localNet&quot;,
+                    &quot;value&quot;: &quot;192.168.0.0/16&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;applicationCategory&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/category/2&quot;,
+                        &quot;name&quot;: &quot;Blogging&quot;
+                    }
+                },
+                {
+                    &quot;type&quot;: &quot;application&quot;,
+                    &quot;value&quot;: {
+                        &quot;id&quot;: &quot;meraki:layer7/application/133&quot;,
+                        &quot;name&quot;: &quot;Battle.net&quot;
+                    }
+                }
+            ],
+            &quot;perClientBandwidthLimits&quot;: {
+                &quot;settings&quot;: &quot;custom&quot;,
+                &quot;bandwidthLimits&quot;: {
+                    &quot;limitUp&quot;: 1000000,
+                    &quot;limitDown&quot;: 1000000
+                }
+            },
+            &quot;dscpTagValue&quot;: null,
+            &quot;pcpTagValue&quot;: null
+        }
+    ]
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/trafficShaping/dscpTaggingOptions</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkTrafficShapingDscpTaggingOptions</i>
+      <br>
+      <b>Returns the available DSCP tagging options for your traffic shaping rules.</b>
+      
+      <pre><code>[
+    {
+        &quot;dscpTagValue&quot;: 10,
+        &quot;description&quot;: &quot;AF11 - High Throughput, Latency Insensitive, Low Drop&quot;
+    },
+    {
+        &quot;dscpTagValue&quot;: 12,
+        &quot;description&quot;: &quot;AF12 - High Throughput, Latency Insensitive, Medium Drop&quot;
+    },
+    {
+        &quot;dscpTagValue&quot;: 14,
+        &quot;description&quot;: &quot;AF13 - High Throughput, Latency Insensitive, High Drop&quot;
+    },
+    {
+        &quot;dscpTagValue&quot;: 18,
+        &quot;description&quot;: &quot;AF21 - Low Latency Data, Low Drop&quot;
+    }
+]</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/trafficShaping/applicationCategories</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkTrafficShapingApplicationCategories</i>
+      <br>
+      <b>Returns the application categories for traffic shaping rules.</b>
+      
+      <pre><code>[
+    {
+        &quot;applicationCategories&quot;: [
+            {
+                &quot;id&quot;: &quot;meraki:layer7/category/24&quot;,
+                &quot;name&quot;: &quot;Advertising&quot;,
+                &quot;applications&quot;: [
+                    {
+                        &quot;id&quot;: &quot;meraki:layer7/application/5&quot;,
+                        &quot;name&quot;: &quot;Advertising.com&quot;
+                    },
+                    {
+                        &quot;id&quot;: &quot;meraki:layer7/application/0&quot;,
+                        &quot;name&quot;: &quot;AppNexus&quot;
+                    },
+                    {
+                        &quot;id&quot;: &quot;meraki:layer7/application/1&quot;,
+                        &quot;name&quot;: &quot;Brightroll&quot;
+                    }
+                ]
+            }
+        ]
+    }
+]</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Uplink interface settings</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkdId}/devices/{serial}/uplinkInterfaceSettings</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getNetworkDeviceUplinkInterfaceSettings</i>
+      <br>
+      <b>Return the uplink interface settings for a device</b>
+      
+      <pre><code>{
+    &quot;wan1&quot;: {
+        &quot;usingStaticIp&quot;: true,
+        &quot;staticIp&quot;: &quot;1.2.3.4&quot;,
+        &quot;staticSubnetMask&quot;: &quot;255.255.255.0&quot;,
+        &quot;staticGatewayIp&quot;: &quot;1.2.3.1&quot;,
+        &quot;staticDns&quot;: [
+            &quot;1.2.3.2&quot;,
+            &quot;1.2.3.3&quot;
+        ],
+        &quot;vlan&quot;: 7
+    },
+    &quot;wan2&quot;: {
+        &quot;usingStaticIp&quot;: false,
+        &quot;vlan&quot;: 2
+    }
+}</code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/networks/{networkId}/devices/{serial}/uplinkInterfaceSettings</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge put">PUT</div> 
+      <i>updateNetworkDeviceUplinkInterfaceSettings</i>
+      <br>
+      <b>Update the uplink interface settings for a device</b>
+      
+      <pre><code>{
+    &quot;wan1&quot;: {
+        &quot;usingStaticIp&quot;: true,
+        &quot;staticIp&quot;: &quot;1.2.3.4&quot;,
+        &quot;staticSubnetMask&quot;: &quot;255.255.255.0&quot;,
+        &quot;staticGatewayIp&quot;: &quot;1.2.3.1&quot;,
+        &quot;staticDns&quot;: [
+            &quot;1.2.3.2&quot;,
+            &quot;1.2.3.3&quot;
+        ],
+        &quot;vlan&quot;: 7
+    },
+    &quot;wan2&quot;: {
+        &quot;usingStaticIp&quot;: false,
+        &quot;vlan&quot;: 2
+    }
+}</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>Webhook logs</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/organizations/{organizationId}/webhookLogs</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getOrganizationWebhookLogs</i>
+      <br>
+      <b>Return the log of webhook POSTs sent</b>
+      
+      <pre><code>[
+    {
+        &quot;organizationId&quot;: &quot;33619&quot;,
+        &quot;networkId&quot;: &quot;L_22742&quot;,
+        &quot;alertType&quot;: &quot;Settings changed&quot;,
+        &quot;url&quot;: &quot;https://www.example.com/path&quot;,
+        &quot;sentAt&quot;: &quot;2019-01-01T13:37:28.123456Z&quot;,
+        &quot;loggedAt&quot;: &quot;2019-01-01T13:37:28.423456Z&quot;,
+        &quot;responseCode&quot;: 200,
+        &quot;responseDuration&quot;: 244
+    }
+]</code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><h3>IDS alerts</h3><!-- Group by Methods--><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/ids_alerts?start_time=&lt;float_start_time&gt;&amp;end_time=&lt;optional_float_end_time&gt;</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getIds_alerts?start_time=<float_start_time>&end_time=<optional_float_end_time></i>
+      <br>
+      <b>Query a shard for up to the last 24 hours of IDS alert data</b>
+      
+      <pre><code></code></pre>
+      </p></blockquote></p><hr><!-- Only display method and path for first iteration--><p class="ml-4"><strong></strong></p><h4 class="mr-4 badge path">PATH  </h4><code style="background-color:lightgray; color:black">/ids_alerts/packet?q_ts=&lt;ids_alert_timestamp&gt;q_organization_id=&lt;organization_id&gt;&amp;q_network_id=&lt;network_id&gt;</code><p class="ml-5"><blockquote><p>Path added
+      <br>
+      <div class="mr-4 badge get">GET</div> 
+      <i>getIds_alertsPacket?q_ts=<ids_alert_timestamp>q_organization_id=<organization_id>&q_network_id=<network_id></i>
+      <br>
+      <b>Query a single network for the packet that generated the ids alert at the given timestamp</b>
+      
+      <pre><code></code></pre>
+      </p></blockquote></p><hr><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --><!-- Limit duplicate path details   --></p></body><style>.post {
   background-color: sandybrown;
 }
 .get {
